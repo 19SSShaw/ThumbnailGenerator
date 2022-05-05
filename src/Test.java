@@ -14,9 +14,18 @@ public class Test extends JFrame{
     private JTextField Player1Input;
     private JTextField Player2Input;
     private JButton submit;
+    Font Bebas;
+    Font LemonMilk;
 
     public Test() throws IOException {
         super("Thumbnail Generator");
+
+        try {
+            Bebas = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(40f);
+            LemonMilk = Font.createFont(Font.TRUETYPE_FONT, new File("LemonMilklight.otf")).deriveFont(12f);
+        } catch (FontFormatException e) {
+            e.printStackTrace();
+        }
 
         BufferedImage myPicture = ImageIO.read(new File("C:\\Users\\skyle\\Pictures\\Saved Pictures\\PogDance.jpg"));
         BufferedImage banPicture = ImageIO.read(new File("C:\\Users\\skyle\\Pictures\\Saved Pictures\\ban.png"));
@@ -37,13 +46,13 @@ public class Test extends JFrame{
 
         JLabel Player1 = new JLabel("BONK! W");
         Player1.setForeground(Color.BLACK);
-        Player1.setBounds(100, 100, 100, 60);
-        Player1.setFont(new Font("Dialog", Font.BOLD, 16));
+        Player1.setBounds(100, 100, 200, 60);
+        Player1.setFont(Bebas);
 
         JLabel Player2 = new JLabel("CITADEL L");
         Player2.setForeground(Color.BLACK);
-        Player2.setBounds(1100, 100, 100, 60);
-        Player2.setFont(new Font("Dialog", Font.BOLD, 16));
+        Player2.setBounds(1100, 100, 200, 60);
+        Player2.setFont(Bebas);
 
         add(background);
         background.add(Player1Input);
