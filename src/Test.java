@@ -13,8 +13,8 @@ public class Test extends JFrame{
     private JLabel bar;
     private JLabel Player1, Player2, bottomTourneyName, smashLogo, tourneyNumber, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle;
     private JLabel Player1Back, Player2Back;
-    private JTextField Player1Input;
-    private JTextField Player2Input;
+    private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel;
+    private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
     private JButton submit;
     private Font Bebas200, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
     private Font LemonMilk40, LemonMilk20;
@@ -66,18 +66,48 @@ public class Test extends JFrame{
         Player2Back.setBounds(773, 440, 507, 92);
 
         Player1Input = new JTextField();
-        Player1Input.setBounds(10,10,100,30);
+        Player1Input.setBounds(10,40,100,30);
+
+        Player1Label = new JLabel("Player 1 Name: ");
+        Player1Label.setBounds(10, 10, 100, 30);
 
         Player2Input = new JTextField();
-        Player2Input.setBounds(290,10,100,30);
+        Player2Input.setBounds(290,40,100,30);
+
+        Player2Label = new JLabel("Player 2 Name: ");
+        Player2Label.setBounds(290, 10, 100, 30);
+
+        formatInput = new JTextField();
+        formatInput.setBounds(10, 90, 100, 30);
+
+        formatLabel = new JLabel("Tournament Format: ");
+        formatLabel.setBounds(10, 60, 200, 30);
+
+        roundInput = new JTextField();
+        roundInput.setBounds(290, 90, 100, 30);
+
+        roundLabel = new JLabel("Current Round: ");
+        roundLabel.setBounds(290, 60, 200, 30);
+
+        numberInput = new JTextField();
+        numberInput.setBounds(10, 140, 100, 30);
+
+        numberLabel = new JLabel("Tournament Number: ");
+        numberLabel.setBounds(10, 110, 200, 30);
+
+        dateInput = new JTextField();
+        dateInput.setBounds(290, 140, 100, 30);
+
+        dateLabel = new JLabel("Date of Tournament: ");
+        dateLabel.setBounds(290, 110, 200, 30);
 
         submit = new JButton("Generate");
-        submit.setBounds(10,50, 100, 30);
+        submit.setBounds(10,180, 100, 30);
 
 
-        bottomTourneyName = new JLabel("ANTIBODIED #");
+        bottomTourneyName = new JLabel("ANTIBODIED #3");
         bottomTourneyName.setForeground(Color.WHITE);
-        bottomTourneyName.setBounds(10,650, 300, 80);
+        bottomTourneyName.setBounds(10,650, 400, 80);
         bottomTourneyName.setFont(LemonMilk40);
 
         date = new JLabel("11/20/2021");
@@ -95,9 +125,9 @@ public class Test extends JFrame{
         tourneyFormat.setBounds(509,180, 243, 94);
         tourneyFormat.setFont(Bebas80);
 
-        tourneyRound = new JLabel("Grand Finals");
+        tourneyRound = new JLabel("Grand Finals", SwingConstants.CENTER);
         tourneyRound.setForeground(Color.BLACK);
-        tourneyRound.setBounds(447, 253, 392, 94);
+        tourneyRound.setBounds(-40, 253, 1280, 94);
         tourneyRound.setFont(Bebas80);
 
         topTourneyName = new JLabel("ANTIBODIED");
@@ -110,20 +140,31 @@ public class Test extends JFrame{
         subtitle.setBounds(480, 115, 416, 50);
         subtitle.setFont(LemonMilk20);
 
-        Player1 = new JLabel("YODA CAGE [W]");
+        Player1 = new JLabel("YODA CAGE [W]", SwingConstants.CENTER);
         Player1.setForeground(Color.BLACK);
-        Player1.setBounds(10, 440, 500, 100);
+        Player1.setBounds(10, 440, 480, 100);
         Player1.setFont(Bebas100);
 
-        Player2 = new JLabel("BEAST [L]");
+        Player2 = new JLabel("BEAST [L]", SwingConstants.CENTER);
         Player2.setForeground(Color.BLACK);
-        Player2.setBounds(897, 440, 500, 100);
+        Player2.setBounds(800, 440, 507, 100);
         Player2.setFont(Bebas100);
 
-        add(background);
+        controlBackground.add(Player1Label);
+        controlBackground.add(Player2Label);
+        controlBackground.add(formatLabel);
+        controlBackground.add(roundLabel);
+        controlBackground.add(numberLabel);
+        controlBackground.add(dateLabel);
         controlBackground.add(Player1Input);
         controlBackground.add(Player2Input);
+        controlBackground.add(formatInput);
+        controlBackground.add(roundInput);
+        controlBackground.add(numberInput);
+        controlBackground.add(dateInput);
         controlBackground.add(submit);
+
+        add(background);
         background.add(topTourneyName);
         background.add(subtitle);
         background.add(tourneyFormat);
@@ -143,6 +184,10 @@ public class Test extends JFrame{
         submit.addActionListener(e -> {
             Player1.setText(Player1Input.getText());
             Player2.setText(Player2Input.getText());
+            tourneyFormat.setText(formatInput.getText());
+            tourneyRound.setText(roundInput.getText());
+            bottomTourneyName.setText("ANTIBODIED #" + numberInput.getText());
+            date.setText(dateInput.getText());
             makeScreenShot(this);
         });
 
