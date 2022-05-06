@@ -9,16 +9,26 @@ import javax.swing.*;
 
 public class Test extends JFrame{
 
-    private JLabel background;
+    private JLabel background, controlBackground;
     private JLabel test;
     private JTextField Player1Input;
     private JTextField Player2Input;
     private JButton submit;
-    Font Bebas;
-    Font LemonMilk;
+    private Font Bebas;
+    private Font LemonMilk;
+
+    private JFrame controls;
 
     public Test() throws IOException {
         super("Thumbnail Generator");
+
+        controls = new JFrame("Controls");
+        //JPanel controlPanel = new JPanel();
+        controlBackground = new JLabel();
+        controlBackground.setBounds(0, 0, 400, 400);
+        controls.add(controlBackground);
+
+        controls.setSize(600, 400);
 
         try {
             Bebas = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(40f);
@@ -27,22 +37,22 @@ public class Test extends JFrame{
             e.printStackTrace();
         }
 
-        BufferedImage myPicture = ImageIO.read(new File("C:\\Users\\skyle\\Pictures\\Saved Pictures\\PogDance.jpg"));
+        BufferedImage myPicture = ImageIO.read(new File("Antibodied\\Background.png"));
         BufferedImage banPicture = ImageIO.read(new File("C:\\Users\\skyle\\Pictures\\Saved Pictures\\ban.png"));
 
         test = new JLabel(new ImageIcon(myPicture));
         test.setBounds(50,50, 200, 200);
 
-        background = new JLabel(new ImageIcon(banPicture));
+        background = new JLabel(new ImageIcon(myPicture));
 
         Player1Input = new JTextField();
-        Player1Input.setBounds(90,10,100,30);
+        Player1Input.setBounds(10,10,100,30);
 
         Player2Input = new JTextField();
-        Player2Input.setBounds(1100,10,100,30);
+        Player2Input.setBounds(290,10,100,30);
 
         submit = new JButton("Generate");
-        submit.setBounds(90,50, 100, 30);
+        submit.setBounds(10,50, 100, 30);
 
         JLabel Player1 = new JLabel("BONK! W");
         Player1.setForeground(Color.BLACK);
@@ -55,9 +65,9 @@ public class Test extends JFrame{
         Player2.setFont(Bebas);
 
         add(background);
-        background.add(Player1Input);
-        background.add(Player2Input);
-        background.add(submit);
+        controlBackground.add(Player1Input);
+        controlBackground.add(Player2Input);
+        controlBackground.add(submit);
         background.add(Player1);
         background.add(Player2);
 
@@ -69,8 +79,10 @@ public class Test extends JFrame{
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1280, 820);
+        controls.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(1294, 757);
         setVisible(true);
+        controls.setVisible(true);
         setLocationRelativeTo(null);
 
         /*BufferedImage bi = new BufferedImage(picLabel.getWidth(), picLabel.getHeight(), BufferedImage.TYPE_INT_ARGB);
