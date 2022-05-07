@@ -262,7 +262,590 @@ public class Test extends JFrame{
                 if(name == "Mario 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - America.png"));
                 if(name == "Mario 3")
-                    System.out.println();
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Blue.png"));
+                if(name == "Mario 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Brown.png"));
+                if(name == "Mario 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Green.png"));
+                if(name == "Mario 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Purple.png"));
+                if(name == "Mario 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Builder.png"));
+                if(name == "Mario 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Wedding.png"));
+                if(name == "Olimar 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Olimar - Default.png"));
+                if(name == "Olimar 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Olimar - Red.png"));
+                if(name == "Olimar 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Olimar - Green.png"));
+                if(name == "Olimar 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Olimar - White.png"));
+                if(name == "Olimar 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Alph - Default.png"));
+                if(name == "Olimar 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Alph - Green.png"));
+                if(name == "Olimar 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Alph - Pink.png"));
+                if(name == "Olimar 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Alph - Red.png"));
+                if(name == "Banjo 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Default.png"));
+                if(name == "Banjo 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Pink.png"));
+                if(name == "Banjo 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Black.png"));
+                if(name == "Banjo 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Purple.png"));
+                if(name == "Banjo 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - White.png"));
+                if(name == "Banjo 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Yellow.png"));
+                if(name == "Banjo 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Blue.png"));
+                if(name == "Banjo 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Banjo - Zombie.png"));
+                if(name == "Bayonetta 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Default.png"));
+                if(name == "Bayonetta 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Alt Default.png"));
+                if(name == "Bayonetta 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Yellow.png"));
+                if(name == "Bayonetta 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Green.png"));
+                if(name == "Bayonetta 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Red.png"));
+                if(name == "Bayonetta 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Alt Red.png"));
+                if(name == "Bayonetta 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - White.png"));
+                if(name == "Bayonetta 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bayo - Alt Blue.png"));
+                if(name == "Bowser 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Default.png"));
+                if(name == "Bowser 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Dark.png"));
+                if(name == "Bowser 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Yellow.png"));
+                if(name == "Bowser 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Green.png"));
+                if(name == "Bowser 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Grey.png"));
+                if(name == "Bowser 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Melon.png"));
+                if(name == "Bowser 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Red.png"));
+                if(name == "Bowser 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Blue.png"));
+                if(name == "Bowser Jr. 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Default.png"));
+                if(name == "Bowser Jr. 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Larry.png"));
+                if(name == "Bowser Jr. 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Roy.png"));
+                if(name == "Bowser Jr. 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Wendy.png"));
+                if(name == "Bowser Jr. 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Iggy.png"));
+                if(name == "Bowser Jr. 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Morton.png"));
+                if(name == "Bowser Jr. 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Lemmy.png"));
+                if(name == "Bowser Jr. 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Ludwig.png"));
+                if(name == "Byleth 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Default.png"));
+                if(name == "Byleth 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Alt Default.png"));
+                if(name == "Byleth 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Blue.png"));
+                if(name == "Byleth 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Alt Red.png"));
+                if(name == "Byleth 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Yellow.png"));
+                if(name == "Byleth 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Alt Green.png"));
+                if(name == "Byleth 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Black.png"));
+                if(name == "Byleth 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Alt Black.png"));
+                if(name == "Captain Falcon 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Default.png"));
+                if(name == "Captain Falcon 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Black.png"));
+                if(name == "Captain Falcon 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Red.png"));
+                if(name == "Captain Falcon 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Green.png"));
+                if(name == "Captain Falcon 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Alt Blue.png"));
+                if(name == "Captain Falcon 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Pink.png"));
+                if(name == "Captain Falcon 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Gold.png"));
+                if(name == "Captain Falcon 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Captain Falcon - Blue.png"));
+                if(name == "Chrom 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Default.png"));
+                if(name == "Chrom 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Red.png"));
+                if(name == "Chrom 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Green.png"));
+                if(name == "Chrom 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Yellow.png"));
+                if(name == "Chrom 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Brown.png"));
+                if(name == "Chrom 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Purple.png"));
+                if(name == "Chrom 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - White.png"));
+                if(name == "Chrom 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Chrom - Black.png"));
+                if(name == "Cloud 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Default.png"));
+                if(name == "Cloud 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Alt Default.png"));
+                if(name == "Cloud 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Blue.png"));
+                if(name == "Cloud 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Alt Blue.png"));
+                if(name == "Cloud 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Red.png"));
+                if(name == "Cloud 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Black.png"));
+                if(name == "Cloud 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Yellow.png"));
+                if(name == "Cloud 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Purple.png"));
+                if(name == "Corrin 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Default.png"));
+                if(name == "Corrin 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Alt Default.png"));
+                if(name == "Corrin 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Red.png"));
+                if(name == "Corrin 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Alt Orange.png"));
+                if(name == "Corrin 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Blue.png"));
+                if(name == "Corrin 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Alt Pink.png"));
+                if(name == "Corrin 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Green.png"));
+                if(name == "Corrin 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Corrin - Alt Black.png"));
+                if(name == "Daisy 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - Default.png"));
+                if(name == "Daisy 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - Green.png"));
+                if(name == "Daisy 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - RedWhite.png"));
+                if(name == "Daisy 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - Blue.png"));
+                if(name == "Daisy 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - RedBlack.png"));
+                if(name == "Daisy 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - Purple.png"));
+                if(name == "Daisy 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - White.png"));
+                if(name == "Daisy 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Daisy - Black.png"));
+                if(name == "Dark Pit 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Default.png"));
+                if(name == "Dark Pit 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Green.png"));
+                if(name == "Dark Pit 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - BlackRed.png"));
+                if(name == "Dark Pit 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Yellow.png"));
+                if(name == "Dark Pit 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Red.png"));
+                if(name == "Dark Pit 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Blue.png"));
+                if(name == "Dark Pit 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - White.png"));
+                if(name == "Dark Pit 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Pit - Purple.png"));
+                if(name == "Dark Samus 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Default.png"));
+                if(name == "Dark Samus 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Green.png"));
+                if(name == "Dark Samus 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Purple.png"));
+                if(name == "Dark Samus 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Red.png"));
+                if(name == "Dark Samus 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Yellow.png"));
+                if(name == "Dark Samus 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - White.png"));
+                if(name == "Dark Samus 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Black.png"));
+                if(name == "Dark Samus 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dark Samus - Pink.png"));
+                if(name == "Diddy 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Default.png"));
+                if(name == "Diddy 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Yellow.png"));
+                if(name == "Diddy 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Pink.png"));
+                if(name == "Diddy 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Purple.png"));
+                if(name == "Diddy 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Green.png"));
+                if(name == "Diddy 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Blue.png"));
+                if(name == "Diddy 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - Brown.png"));
+                if(name == "Diddy 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Diddy - White.png"));
+                if(name == "Donkey Kong 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Default.png"));
+                if(name == "Donkey Kong 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Black.png"));
+                if(name == "Donkey Kong 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Red.png"));
+                if(name == "Donkey Kong 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Purple.png"));
+                if(name == "Donkey Kong 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Green.png"));
+                if(name == "Donkey Kong 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - White.png"));
+                if(name == "Donkey Kong 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Yellow.png"));
+                if(name == "Donkey Kong 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Donkey Kong - Pink.png"));
+                if(name == "Dr. Mario 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Default.png"));
+                if(name == "Dr. Mario 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Red.png"));
+                if(name == "Dr. Mario 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Blue.png"));
+                if(name == "Dr. Mario 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Green.png"));
+                if(name == "Dr. Mario 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Black.png"));
+                if(name == "Dr. Mario 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Yellow.png"));
+                if(name == "Dr. Mario 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Purple.png"));
+                if(name == "Dr. Mario 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Dr. Mario - Pink.png"));
+                if(name == "Duck Hunt 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Default.png"));
+                if(name == "Duck Hunt 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Black.png"));
+                if(name == "Duck Hunt 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Light Brown.png"));
+                if(name == "Duck Hunt 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Brown.png"));
+                if(name == "Duck Hunt 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Dalmation.png"));
+                if(name == "Duck Hunt 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Red.png"));
+                if(name == "Duck Hunt 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Yellow.png"));
+                if(name == "Duck Hunt 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Duck Hunt - Dark Brown.png"));
+                if(name == "Falco 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Default.png"));
+                if(name == "Falco 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Orange.png"));
+                if(name == "Falco 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Blue.png"));
+                if(name == "Falco 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Pink.png"));
+                if(name == "Falco 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Green.png"));
+                if(name == "Falco 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Black.png"));
+                if(name == "Falco 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - White.png"));
+                if(name == "Falco 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Falco - Purple.png"));
+                if(name == "Fox 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Default.png"));
+                if(name == "Fox 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Black.png"));
+                if(name == "Fox 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Pink.png"));
+                if(name == "Fox 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Green.png"));
+                if(name == "Fox 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Orange.png"));
+                if(name == "Fox 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - White.png"));
+                if(name == "Fox 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Yellow.png"));
+                if(name == "Fox 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Alt Wolf.png"));
+                if(name == "Ganondorf 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Default.png"));
+                if(name == "Ganondorf 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Purple.png"));
+                if(name == "Ganondorf 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Blue.png"));
+                if(name == "Ganondorf 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Green.png"));
+                if(name == "Ganondorf 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Dark Purple.png"));
+                if(name == "Ganondorf 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Pink.png"));
+                if(name == "Ganondorf 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Dark.png"));
+                if(name == "Ganondorf 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Green Skin.png"));
+                if(name == "GnW 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Default.png"));
+                if(name == "GnW 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Red.png"));
+                if(name == "GnW 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Yellow.png"));
+                if(name == "GnW 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Blue.png"));
+                if(name == "GnW 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Teal.png"));
+                if(name == "GnW 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Mint.png"));
+                if(name == "GnW 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Green.png"));
+                if(name == "GnW 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - White.png"));
+                if(name == "Greninja 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Default.png"));
+                if(name == "Greninja 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Red.png"));
+                if(name == "Greninja 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Pink.png"));
+                if(name == "Greninja 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Black.png"));
+                if(name == "Greninja 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Purple.png"));
+                if(name == "Greninja 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Green.png"));
+                if(name == "Greninja 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - White.png"));
+                if(name == "Greninja 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Greninja - Dark Purple.png"));
+                if(name == "Hero 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Hero - Default.png"));
+                if(name == "Hero 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Hero - Erdrick.png"));
+                if(name == "Hero 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Hero - Solo.png"));
+                if(name == "Hero 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Hero - Eight.png"));
+                if(name == "Ice Climbers 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Default.png"));
+                if(name == "Ice Climbers 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Light Blue Pair.png"));
+                if(name == "Ice Climbers 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Green.png"));
+                if(name == "Ice Climbers 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Blue Pair.png"));
+                if(name == "Ice Climbers 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Red.png"));
+                if(name == "Ice Climbers 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Brown.png"));
+                if(name == "Ice Climbers 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - White.png"));
+                if(name == "Ice Climbers 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ice Climbers - Orange.png"));
+                if(name == "Ike 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Default.png"));
+                if(name == "Ike 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Alt Default.png"));
+                if(name == "Ike 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Purple.png"));
+                if(name == "Ike 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Alt Red.png"));
+                if(name == "Ike 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Green.png"));
+                if(name == "Ike 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Alt Green.png"));
+                if(name == "Ike 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - White.png"));
+                if(name == "Ike 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ike - Alt Black.png"));
+                if(name == "Incineroar 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Default.png"));
+                if(name == "Incineroar 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Green.png"));
+                if(name == "Incineroar 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - BlackRed.png"));
+                if(name == "Incineroar 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Blue.png"));
+                if(name == "Incineroar 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Orange.png"));
+                if(name == "Incineroar 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Purple.png"));
+                if(name == "Incineroar 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - Black.png"));
+                if(name == "Incineroar 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Incineroar - WhtieRed.png"));
+                if(name == "Inkling 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Orange.png"));
+                if(name == "Inkling 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Blue.png"));
+                if(name == "Inkling 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Yellow.png"));
+                if(name == "Inkling 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Green.png"));
+                if(name == "Inkling 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Pink.png"));
+                if(name == "Inkling 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Hipster.png"));
+                if(name == "Inkling 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Purple.png"));
+                if(name == "Inkling 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Inkling - Dark Purple.png"));
+                if(name == "Isabelle 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Default.png"));
+                if(name == "Isabelle 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Orange.png"));
+                if(name == "Isabelle 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Pink.png"));
+                if(name == "Isabelle 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Red.png"));
+                if(name == "Isabelle 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Purple.png"));
+                if(name == "Isabelle 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell - Green.png"));
+                if(name == "Isabelle 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabell Grey.png"));
+                if(name == "Isabelle 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Isabelle - Light Blue.png"));
+                if(name == "Jigglypuff 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Default.png"));
+                if(name == "Jigglypuff 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Flower.png"));
+                if(name == "Jigglypuff 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Poke Hat.png"));
+                if(name == "Jigglypuff 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Sombrero.png"));
+                if(name == "Jigglypuff 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Sleep Cap.png"));
+                if(name == "Jigglypuff 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Ribbon.png"));
+                if(name == "Jigglypuff 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Nurse Joy.png"));
+                if(name == "Jigglypuff 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Jigglypuff - Kalos Hat.png"));
+                if(name == "Joker 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Default.png"));
+                if(name == "Joker 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Purple.png"));
+                if(name == "Joker 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Blue.png"));
+                if(name == "Joker 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Yellow.png"));
+                if(name == "Joker 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Red.png"));
+                if(name == "Joker 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - White.png"));
+                if(name == "Joker 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Alt Default.png"));
+                if(name == "Joker 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Joker - Alt White.png"));
+                if(name == "Kazuya 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kazuya - default.png"));
+                if(name == "Kazuya 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kazuya - Alt Default.png"));
+                if(name == "Ken 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Default.png"));
+                if(name == "Ken 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Black.png"));
+                if(name == "Ken 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Purple.png"));
+                if(name == "Ken 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - White.png"));
+                if(name == "Ken 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Green.png"));
+                if(name == "Ken 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Yellow.png"));
+                if(name == "Ken 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Blue.png"));
+                if(name == "Ken 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ken - Alt Violent Ken.png"));
+                if(name == "King DeDeDe 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Default.png"));
+                if(name == "King DeDeDe 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Pink.png"));
+                if(name == "King DeDeDe 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - BlueOrange.png"));
+                if(name == "King DeDeDe 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Yellow.png"));
+                if(name == "King DeDeDe 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Light Blue.png"));
+                if(name == "King DeDeDe 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Grey.png"));
+                if(name == "King DeDeDe 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - White.png"));
+                if(name == "King DeDeDe 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King DeDeDe - Purple.png"));
+                if(name == "King K. Rool 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Default.png"));
+                if(name == "King K. Rool 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Red.png"));
+                if(name == "King K. Rool 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Blue.png"));
+                if(name == "King K. Rool 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Yellow.png"));
+                if(name == "King K. Rool 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Pink.png"));
+                if(name == "King K. Rool 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Black.png"));
+                if(name == "King K. Rool 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - Maroon.png"));
+                if(name == "King K. Rool 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\King K. Rool - White.png"));
+                if(name == "Kirby 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Default.png"));
+                if(name == "Kirby 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Yellow.png"));
+                if(name == "Kirby 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Blue.png"));
+                if(name == "Kirby 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Red.png"));
+                if(name == "Kirby 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Green.png"));
+                if(name == "Kirby 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - White.png"));
+                if(name == "Kirby 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Orange.png"));
+                if(name == "Kirby 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Kirby - Black.png"));
+                if(name == "Link 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Default.png"));
+                if(name == "Link 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Alt Green.png"));
+                if(name == "Link 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Red.png"));
+                if(name == "Link 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Alt Diety.png"));
+                if(name == "Link 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Blue.png"));
+                if(name == "Link 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Alt Default.png"));
+                if(name == "Link 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - White.png"));
+                if(name == "Link 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Link - Alt Dark Link.png"));
+                if(name == "Little Mac 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Default.png"));
+                if(name == "Little Mac 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Yellow.png"));
+                if(name == "Little Mac 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - White.png"));
+                if(name == "Little Mac 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Blue.png"));
+                if(name == "Little Mac 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Alt Blonde.png"));
+                if(name == "Little Mac 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Alt Pink.png"));
+                if(name == "Little Mac 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Alt Wire.png"));
+                if(name == "Little Mac 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Little Mac - Alt Green.png"));
+
             }
             else if(player == 2) {
                 if(name == "Mario 1")
