@@ -239,8 +239,8 @@ public class Test extends JFrame{
             tourneyRound.setText(roundInput.getText());
             bottomTourneyName.setText("ANTIBODIED #" + numberInput.getText());
             date.setText(dateInput.getText());
-            Player1Img1 = chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1);
-            Player2Img1 = chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2);
+            Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
+            Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
             makeScreenShot(this);
         });
 
@@ -253,7 +253,7 @@ public class Test extends JFrame{
         setLocationRelativeTo(null);
     }
 
-    private JLabel chooseCharToLoad(String name, int player) {
+    private BufferedImage chooseCharToLoad(String name, int player) {
         BufferedImage image = null;
         try {
             if(player == 1) {
@@ -261,14 +261,24 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - Default.png"));
                 if(name == "Mario 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mario - America.png"));
+                if(name == "Mario 3")
+                    System.out.println();
+            }
+            else if(player == 2) {
+                if(name == "Mario 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mario - Default.png"));
+                if(name == "Mario 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mario - America.png"));
+                if(name == "Mario 3")
+                    System.out.println();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        image = scale1(image, 0.8);
+        image = scale1(image, 0.5);
         JLabel retLabel = new JLabel(new ImageIcon(image));
 
-        return retLabel;
+        return image;
     }
 
     private String[] initCharacters() {
