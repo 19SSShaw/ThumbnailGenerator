@@ -338,21 +338,21 @@ public class Test extends JFrame{
                 if(name == "Bowser 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser - Blue.png"));
                 if(name == "Bowser Jr. 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Default.png"));
                 if(name == "Bowser Jr. 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Larry.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Larry.png"));
                 if(name == "Bowser Jr. 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Roy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Roy.png"));
                 if(name == "Bowser Jr. 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Wendy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Wendy.png"));
                 if(name == "Bowser Jr. 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Iggy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Iggy.png"));
                 if(name == "Bowser Jr. 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Morton.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Morton.png"));
                 if(name == "Bowser Jr. 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Lemmy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Lemmy.png"));
                 if(name == "Bowser Jr. 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr. - Ludwig.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Bowser Jr - Ludwig.png"));
                 if(name == "Byleth 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Byleth - Default.png"));
                 if(name == "Byleth 2")
@@ -578,21 +578,21 @@ public class Test extends JFrame{
                 if(name == "Fox 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Fox - Alt Wolf.png"));
                 if(name == "Ganondorf 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Default.png"));
                 if(name == "Ganondorf 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Purple.png"));
                 if(name == "Ganondorf 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Blue.png"));
                 if(name == "Ganondorf 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Green.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Green.png"));
                 if(name == "Ganondorf 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Dark Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Dark Purple.png"));
                 if(name == "Ganondorf 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Pink.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Pink.png"));
                 if(name == "Ganondorf 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Dark.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Dark.png"));
                 if(name == "Ganondorf 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganondorf - Green Skin.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ganon - Green Skin.png"));
                 if(name == "GnW 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\GnW - Default.png"));
                 if(name == "GnW 2")
@@ -1012,21 +1012,21 @@ public class Test extends JFrame{
                 if(name == "Ness 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ness - Checker Shirt.png"));
                 if(name == "Pac-Man 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Default.png"));
                 if(name == "Pac-Man 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Blue.png"));
                 if(name == "Pac-Man 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Yellow.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Yellow.png"));
                 if(name == "Pac-Man 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Black.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Black.png"));
                 if(name == "Pac-Man 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Purple.png"));
                 if(name == "Pac-Man 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - White.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - White.png"));
                 if(name == "Pac-Man 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Maroon.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Maroon.png"));
                 if(name == "Pac-Man 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pac-Man - Plaid.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pacman - Plaid.png"));
                 if(name == "Palutena 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Palutena - Default.png"));
                 if(name == "Palutena 2")
@@ -1066,7 +1066,7 @@ public class Test extends JFrame{
                 if(name == "Pichu 3")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Red.png"));
                 if(name == "Pichu 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Skull.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Team Skull.png"));
                 if(name == "Pichu 5")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Team Aqua.png"));
                 if(name == "Pichu 6")
@@ -1075,6 +1075,22 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Flower.png"));
                 if(name == "Pichu 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pichu - Headband.png"));
+                if(name == "Pikachu 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Default.png"));
+                if(name == "Pikachu 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Red.png"));
+                if(name == "Pikachu 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Green.png"));
+                if(name == "Pikachu 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Jhoto.png"));
+                if(name == "Pikachu 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Blue.png"));
+                if(name == "Pikachu 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Kalos.png"));
+                if(name == "Pikachu 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Alola.png"));
+                if(name == "Pikachu 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Alt Pika Libre.png"));
                 if(name == "Plant 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Piranha Plant - Default.png"));
                 if(name == "Plant 2")
@@ -1184,21 +1200,21 @@ public class Test extends JFrame{
                 if(name == "Ridley 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Ridley - Alt Pale.png"));
                 if(name == "R.O.B 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Default.png"));
                 if(name == "R.O.B 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Alt Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Alt Default.png"));
                 if(name == "R.O.B 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Yellow.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Yellow.png"));
                 if(name == "R.O.B 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Pink.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Pink.png"));
                 if(name == "R.O.B 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Blue.png"));
                 if(name == "R.O.B 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Green.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Green.png"));
                 if(name == "R.O.B 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Light Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Light Blue.png"));
                 if(name == "R.O.B 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\R.O.B - Red.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\ROB - Red.png"));
                 if(name == "Robin 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Robin - Default.png"));
                 if(name == "Robin 2")
@@ -1650,21 +1666,21 @@ public class Test extends JFrame{
                 if(name == "Bowser 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser - Blue.png"));
                 if(name == "Bowser Jr. 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Default.png"));
                 if(name == "Bowser Jr. 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Larry.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Larry.png"));
                 if(name == "Bowser Jr. 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Roy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Roy.png"));
                 if(name == "Bowser Jr. 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Wendy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Wendy.png"));
                 if(name == "Bowser Jr. 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Iggy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Iggy.png"));
                 if(name == "Bowser Jr. 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Morton.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Morton.png"));
                 if(name == "Bowser Jr. 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Lemmy.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Lemmy.png"));
                 if(name == "Bowser Jr. 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr. - Ludwig.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Bowser Jr - Ludwig.png"));
                 if(name == "Byleth 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Byleth - Default.png"));
                 if(name == "Byleth 2")
@@ -1890,21 +1906,21 @@ public class Test extends JFrame{
                 if(name == "Fox 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Fox - Alt Wolf.png"));
                 if(name == "Ganondorf 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Default.png"));
                 if(name == "Ganondorf 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Purple.png"));
                 if(name == "Ganondorf 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Blue.png"));
                 if(name == "Ganondorf 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Green.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Green.png"));
                 if(name == "Ganondorf 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Dark Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Dark Purple.png"));
                 if(name == "Ganondorf 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Pink.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Pink.png"));
                 if(name == "Ganondorf 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Dark.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Dark.png"));
                 if(name == "Ganondorf 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganondorf - Green Skin.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ganon - Green Skin.png"));
                 if(name == "GnW 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\GnW - Default.png"));
                 if(name == "GnW 2")
@@ -2324,21 +2340,21 @@ public class Test extends JFrame{
                 if(name == "Ness 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ness - Checker Shirt.png"));
                 if(name == "Pac-Man 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Default.png"));
                 if(name == "Pac-Man 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Blue.png"));
                 if(name == "Pac-Man 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Yellow.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Yellow.png"));
                 if(name == "Pac-Man 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Black.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Black.png"));
                 if(name == "Pac-Man 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Purple.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Purple.png"));
                 if(name == "Pac-Man 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - White.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - White.png"));
                 if(name == "Pac-Man 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Maroon.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Maroon.png"));
                 if(name == "Pac-Man 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pac-Man - Plaid.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pacman - Plaid.png"));
                 if(name == "Palutena 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Palutena - Default.png"));
                 if(name == "Palutena 2")
@@ -2378,7 +2394,7 @@ public class Test extends JFrame{
                 if(name == "Pichu 3")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Red.png"));
                 if(name == "Pichu 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Skull.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Team Skull.png"));
                 if(name == "Pichu 5")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Team Aqua.png"));
                 if(name == "Pichu 6")
@@ -2387,6 +2403,22 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Flower.png"));
                 if(name == "Pichu 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pichu - Headband.png"));
+                if(name == "Pikachu 1")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Default.png"));
+                if(name == "Pikachu 2")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Red.png"));
+                if(name == "Pikachu 3")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Green.png"));
+                if(name == "Pikachu 4")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Jhoto.png"));
+                if(name == "Pikachu 5")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Blue.png"));
+                if(name == "Pikachu 6")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Kalos.png"));
+                if(name == "Pikachu 7")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Alola.png"));
+                if(name == "Pikachu 8")
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Alt Pika Libre.png"));
                 if(name == "Plant 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Piranha Plant - Default.png"));
                 if(name == "Plant 2")
@@ -2496,21 +2528,21 @@ public class Test extends JFrame{
                 if(name == "Ridley 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Ridley - Alt Pale.png"));
                 if(name == "R.O.B 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Default.png"));
                 if(name == "R.O.B 2")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Alt Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Alt Default.png"));
                 if(name == "R.O.B 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Yellow.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Yellow.png"));
                 if(name == "R.O.B 4")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Pink.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Pink.png"));
                 if(name == "R.O.B 5")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Blue.png"));
                 if(name == "R.O.B 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Green.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Green.png"));
                 if(name == "R.O.B 7")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Light Blue.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Light Blue.png"));
                 if(name == "R.O.B 8")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\R.O.B - Red.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\ROB - Red.png"));
                 if(name == "Robin 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Robin - Default.png"));
                 if(name == "Robin 2")
