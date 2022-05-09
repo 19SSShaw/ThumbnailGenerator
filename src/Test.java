@@ -63,10 +63,10 @@ public class Test extends JFrame{
         Yoda1 = scale1(Yoda1, 0.5);
         Beast1 = scale1(Beast1, 0.8);
         Player1Img1 = new JLabel(new ImageIcon(Yoda1));
-        Player1Img1.setBounds(-110, 114, 760, 700);
+        Player1Img1.setBounds(-110, 0, 760, 850);
 
         Player2Img1 = new JLabel(new ImageIcon(Beast1));
-        Player2Img1.setBounds(666, 0, 760, 720);
+        Player2Img1.setBounds(666, 0, 760, 850);
 
         background = new JLabel(new ImageIcon(myPicture));
 
@@ -241,7 +241,15 @@ public class Test extends JFrame{
             date.setText(dateInput.getText());
             Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
             Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
+            setChordsForImg(Player1Char1.getSelectedItem().toString(), 1);
             makeScreenShot(this);
+        });
+
+
+        Player2Char2.addActionListener (new ActionListener () {
+            public void actionPerformed(ActionEvent e) {
+                Player1Img1.setBounds(-110, 0, 760, 850);
+            }
         });
 
 
@@ -251,6 +259,125 @@ public class Test extends JFrame{
         setVisible(true);
         controls.setVisible(true);
         setLocationRelativeTo(null);
+    }
+
+    private void setChordsForImg(String name, int player) {
+        if(player == 1) {
+            if (name.contains("Samus"))
+                Player1Img1.setBounds(-110, 150, 760, 1100);
+            if (name.contains("Dark Samus"))
+                Player1Img1.setBounds(-110, 150, 850, 1100);
+            if (name.contains("Yoshi"))
+                Player1Img1.setBounds(-110, 0, 760, 850);
+            if (name.contains("Captain Falcon"))
+                Player1Img1.setBounds(-110, 150, 760, 900);
+            if (name.contains("Jigglypuff"))
+                Player1Img1.setBounds(-110, -75, 760, 850);
+            if (name.contains("Peach"))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+            if (name.contains("Daisy"))
+                Player1Img1.setBounds(-110, 100, 760, 900);
+            if (name.contains("Bowser "))
+                Player1Img1.setBounds(-110, -50, 760, 850);
+            if (name.contains("Ice"))
+                Player1Img1.setBounds(-110, -100, 760, 850);
+            if (name.contains("Sheik"))
+                Player1Img1.setBounds(-110, 100, 800, 930);
+            if (name.contains("Dr. "))
+                Player1Img1.setBounds(-110, 0, 760, 850);
+            if (name.contains("Pichu"))
+                Player1Img1.setBounds(-110, -65, 760, 850);
+            if (name.contains("Falco "))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+            if (name.contains("Marth"))
+                Player1Img1.setBounds(-110, 100, 820, 850);
+            if (name.contains("Lucina"))
+                Player1Img1.setBounds(-110, 100, 850, 850);
+            if (name.contains("Ganon"))
+                Player1Img1.setBounds(-175, 100, 930, 950);
+            if (name.contains("GnW"))
+                Player1Img1.setBounds(-175, -25, 930, 950);
+            if (name.contains("Meta"))
+                Player1Img1.setBounds(-150, -150, 850, 850);
+            if (name.contains("ZSS"))
+                Player1Img1.setBounds(-175, 130, 790, 1100);
+            if (name.contains("Snake"))
+                Player1Img1.setBounds(-110, 130, 760, 1000);
+            if (name.contains("Ike"))
+                Player1Img1.setBounds(-110, 130, 900, 1000);
+            if (name.contains("Ivy"))
+                Player1Img1.setBounds(-110, -150, 760, 850);
+            if (name.contains("Sonic"))
+                Player1Img1.setBounds(-110, 75, 760, 850);
+            if (name.contains("Olimar"))
+                Player1Img1.setBounds(-110, -75, 760, 850);
+            if (name.contains("Toon"))
+                Player1Img1.setBounds(-110, -25, 760, 850);
+            if (name.contains("Mega"))
+                Player1Img1.setBounds(-110, 50, 760, 850);
+            if (name.contains("Wii"))
+                Player1Img1.setBounds(-110, 150, 760, 1100);
+            if (name.contains("Rosa"))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+            if (name.contains("Little Mac"))
+                Player1Img1.setBounds(-170, 100, 760, 890);
+            if (name.contains("Brawler"))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+            if (name.contains("Gunner"))
+                Player1Img1.setBounds(-110, 50, 760, 850);
+            if (name.contains("Cuphead"))
+                Player1Img1.setBounds(-110, -80, 760, 850);
+            if (name.contains("Robin"))
+                Player1Img1.setBounds(-190, 100, 760, 950);
+            if (name.contains("Shulk"))
+                Player1Img1.setBounds(-190, 85, 760, 950);
+            if (name.contains("Duck Hunt"))
+                Player1Img1.setBounds(-110, -190, 760, 850);
+            if (name.contains("Ryu"))
+                Player1Img1.setBounds(-110, 150, 760, 1200);
+            if (name.contains("Ken"))
+                Player1Img1.setBounds(-90, 150, 760, 1200);
+            if (name.contains("Cloud"))
+                Player1Img1.setBounds(-200, 150, 760, 950);
+            if (name.contains("Corrin"))
+                Player1Img1.setBounds(-200, 150, 760, 1100);
+            if (name.contains("Bayonetta"))
+                Player1Img1.setBounds(-300, 150, 1100, 1050);
+            if (name.contains("Ridley"))
+                Player1Img1.setBounds(-500, -200, 1120, 1050);
+            if (name.contains("Simon"))
+                Player1Img1.setBounds(-110, 150, 800, 950);
+            if (name.contains("Richter"))
+                Player1Img1.setBounds(-110, 50, 800, 1200);
+            if (name.contains("King K. Rool"))
+                Player1Img1.setBounds(-150, 100, 800, 850);
+            if (name.contains("Isabelle"))
+                Player1Img1.setBounds(-110, -75, 760, 850);
+            if (name.contains("Incineroar"))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+            if (name.contains("Plant"))
+                Player1Img1.setBounds(-190, 0, 760, 850);
+            if (name.contains("Joker"))
+                Player1Img1.setBounds(-190, 100, 760, 850);
+            if (name.contains("Banjo"))
+                Player1Img1.setBounds(-190, -75, 760, 850);
+            if (name.contains("Terry"))
+                Player1Img1.setBounds(-110, 150, 760, 950);
+            if (name.contains("Byleth"))
+                Player1Img1.setBounds(-110, 150, 760, 950);
+            if (name.contains("Steve"))
+                Player1Img1.setBounds(-200, 150, 760, 850);
+            if (name.contains("Sephiroth"))
+                Player1Img1.setBounds(-110, 200, 760, 1100);
+            if (name.contains("Pyra Mythra"))
+                Player1Img1.setBounds(-300, 150, 1200, 850);
+            if (name.contains("Kazuya"))
+                Player1Img1.setBounds(-150, 150, 760, 1050);
+            if (name.contains("Sora"))
+                Player1Img1.setBounds(-110, 100, 760, 850);
+
+            // Default chords are Player1Img1.setBounds(-110, 0, 760, 850);
+        }
     }
 
     private BufferedImage chooseCharToLoad(String name, int player) {
@@ -412,7 +539,7 @@ public class Test extends JFrame{
                 if(name == "Cloud 5")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Red.png"));
                 if(name == "Cloud 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Black.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Alt Black.png"));
                 if(name == "Cloud 7")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Cloud - Yellow.png"));
                 if(name == "Cloud 8")
@@ -973,12 +1100,18 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mewtwo - Light Blue.png"));
                 if(name == "Mewtwo 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mewtwo - Black.png"));
-                if(name == "Mii Brawler")
+                if(name == "Mii Brawler") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mii Brawler.png"));
-                if(name == "Mii Gunner 1")
+                    image = scale1(image, 0.4);
+                }
+                if(name == "Mii Gunner 1") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mii Gunner - default.png"));
-                if(name == "Mii Gunner - Cuphead")
+                    image = scale1(image, 0.4);
+                }
+                if (name == "Mii Gunner - Cuphead") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Mii Gunner - Cuphead.png"));
+                    image = scale1(image, 0.6);
+                }
                 if(name == "Min Min 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Min-Min---Default.png"));
                 if(name == "Min Min 2")
@@ -1092,7 +1225,7 @@ public class Test extends JFrame{
                 if(name == "Pikachu 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pikachu - Alt Pika Libre.png"));
                 if(name == "Plant 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Piranha Plant - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Piranha Plat - Default.png"));
                 if(name == "Plant 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Piranha Plant - Green.png"));
                 if(name == "Plant 3")
@@ -1163,10 +1296,14 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\pyra - vibrant.png"));
                 if(name == "Pyra Mythra 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\pyra - platinum and gold.png"));
-                if(name == "Pyra Solo")
+                if(name == "Pyra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\pyra - pyra solo.png"));
-                if(name == "Mythra Solo")
+                    image = scale1(image, 1.5);
+                }
+                if(name == "Mythra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pyra - mythra solo.png"));
+                    image = scale1(image, 1.5);
+                }
                 if(name == "Richter 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Richter - Default.png"));
                 if(name == "Richter 2")
@@ -1428,7 +1565,7 @@ public class Test extends JFrame{
                 if(name == "Terry 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Terry - Blue.png"));
                 if(name == "Terry 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Terry - Red.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Terry - Alt Red.png"));
                 if(name == "Terry 4")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Terry - Green.png"));
                 if(name == "Terry 5")
@@ -1456,7 +1593,7 @@ public class Test extends JFrame{
                 if(name == "Toon Link 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Toon Link - Alt Hero.png"));
                 if(name == "Villager 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Villager - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Villager Default.png"));
                 if(name == "Villager 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Villager - Pink.png"));
                 if(name == "Villager 3")
@@ -1740,7 +1877,7 @@ public class Test extends JFrame{
                 if(name == "Cloud 5")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Cloud - Red.png"));
                 if(name == "Cloud 6")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Cloud - Black.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Cloud - Alt Black.png"));
                 if(name == "Cloud 7")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Cloud - Yellow.png"));
                 if(name == "Cloud 8")
@@ -1954,7 +2091,7 @@ public class Test extends JFrame{
                 if(name == "Greninja 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Greninja - Dark Purple.png"));
                 if(name == "Hero 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Hero - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Hero - default.png"));
                 if(name == "Hero 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Hero - Erdrick.png"));
                 if(name == "Hero 3")
@@ -2301,12 +2438,18 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mewtwo - Light Blue.png"));
                 if(name == "Mewtwo 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mewtwo - Black.png"));
-                if(name == "Mii Brawler")
+                if(name == "Mii Brawler") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mii Brawler.png"));
-                if(name == "Mii Gunner 1")
+                    image = scale1(image, 0.8);
+                }
+                if(name == "Mii Gunner 1") {
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mii Gunner - default.png"));
-                if(name == "Mii Gunner - Cuphead")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mii Gunner - Cuphead.png"));
+                    image = scale1(image, 0.8);
+                }
+                    if (name == "Mii Gunner - Cuphead") {
+                        image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Mii Gunner - Cuphead.png"));
+                        image = scale1(image, 0.8);
+                    }
                 if(name == "Min Min 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Min-Min---Default.png"));
                 if(name == "Min Min 2")
@@ -2420,7 +2563,7 @@ public class Test extends JFrame{
                 if(name == "Pikachu 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pikachu - Alt Pika Libre.png"));
                 if(name == "Plant 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Piranha Plant - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Piranha Plat - Default.png"));
                 if(name == "Plant 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Piranha Plant - Green.png"));
                 if(name == "Plant 3")
@@ -2491,10 +2634,14 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\pyra - vibrant.png"));
                 if(name == "Pyra Mythra 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\pyra - platinum and gold.png"));
-                if(name == "Pyra Solo")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\pyra - pyra solo.png"));
-                if(name == "Mythra Solo")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Pyra - mythra solo.png"));
+                if(name == "Pyra Solo") {
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\pyra - pyra solo.png"));
+                    image = scale1(image, 1.5);
+                }
+                if(name == "Mythra Solo") {
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 1\\Pyra - mythra solo.png"));
+                    image = scale1(image, 1.5);
+                }
                 if(name == "Richter 1")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Richter - Default.png"));
                 if(name == "Richter 2")
@@ -2756,7 +2903,7 @@ public class Test extends JFrame{
                 if(name == "Terry 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Terry - Blue.png"));
                 if(name == "Terry 3")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Terry - Red.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Terry - Alt Red.png"));
                 if(name == "Terry 4")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Terry - Green.png"));
                 if(name == "Terry 5")
@@ -2784,7 +2931,7 @@ public class Test extends JFrame{
                 if(name == "Toon Link 8")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Toon Link - Alt Hero.png"));
                 if(name == "Villager 1")
-                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Villager - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Villager Default.png"));
                 if(name == "Villager 2")
                     image = ImageIO.read(new File("SSBU Character Renders\\For Player 2\\Villager - Pink.png"));
                 if(name == "Villager 3")
@@ -3591,6 +3738,8 @@ public class Test extends JFrame{
         return characters;
     }
 
+    //Code from Andrew Thompson
+    //https://groups.google.com/g/comp.lang.java.gui/c/A4pqvWcO2tk/m/-ObDd_9ULmYJ?pli=1
     public void makeScreenShot(Component component) {
         final JFrame f = new JFrame("Test Screenshot");
         BufferedImage img = getScreenShot(this.getContentPane());
@@ -3602,6 +3751,8 @@ public class Test extends JFrame{
         }
     }
 
+    //Code from Andrew Thompson
+    //https://groups.google.com/g/comp.lang.java.gui/c/A4pqvWcO2tk/m/-ObDd_9ULmYJ?pli=1
     private static BufferedImage getScreenShot(Container component) {
 
         BufferedImage image = new BufferedImage(
