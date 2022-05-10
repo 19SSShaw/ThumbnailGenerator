@@ -13,16 +13,17 @@ public class Test extends JFrame{
 
     private JLabel background, controlBackground;
     private JLabel bar;
-    private JLabel Player1, Player2, bottomTourneyName, smashLogo, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle;
+    private JLabel Player1, Player2, bottomTourneyName, smashLogo, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle, topTourneyImg;
     private JLabel Player1Back, Player2Back;
     private JLabel Player1Img1, Player1Img2, Player2Img1, Player2Img2;
-    private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel, Player1Char1Label, Player1Char2Label, Player2Char1Label, Player2Char2Label;
+    private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel, Player1Char1Label, Player2Char1Label, pickLabel;
     private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
-    private JComboBox Player1Char1, Player1Char2, Player2Char1, Player2Char2;
-    private String allCharacters[] = new String[663];
+    private JComboBox Player1Char1, Player2Char1, pickTourney;
+    private String allCharacters[], tourneys[];
     private JButton submit;
     private Font Bebas200, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
     private Font LemonMilk40, LemonMilk20;
+    private Font Agency100, Agency50;
 
     private JFrame controls;
 
@@ -30,15 +31,16 @@ public class Test extends JFrame{
         super("Thumbnail Generator");
         //Load character names into the array allCharacters
         allCharacters = initCharacters();
+        tourneys = new String[]{"Antibodied", "Run It Back", "Recharged"};
 
+        //Set up the control panel frame
         controls = new JFrame("Controls");
-        //JPanel controlPanel = new JPanel();
         controlBackground = new JLabel();
         controlBackground.setBounds(0, 0, 400, 400);
         controls.add(controlBackground);
-
         controls.setSize(600, 400);
 
+        //Loads the fonts and font sizes
         try {
             Bebas200 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(270f);
             Bebas125 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(125f);
@@ -48,11 +50,142 @@ public class Test extends JFrame{
             Bebas30 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(30f);
             LemonMilk40 = Font.createFont(Font.TRUETYPE_FONT, new File("LemonMilklight.otf")).deriveFont(40f);
             LemonMilk20 = Font.createFont(Font.TRUETYPE_FONT, new File("LemonMilklight.otf")).deriveFont(20f);
+            Agency100 = Font.createFont(Font.TRUETYPE_FONT, new File("AGENCYB.ttf")).deriveFont(100f);
+            Agency50 = Font.createFont(Font.TRUETYPE_FONT, new File("AGENCYB.ttf")).deriveFont(50f);
         } catch (FontFormatException e) {
             e.printStackTrace();
         }
 
+        anti_loadAssetsStart();
+
+        loadControls();
+
+        add(background);
+
+        addToBackgroundStart();
+
+        submit.addActionListener(e -> {
+            Player1.setText(Player1Input.getText());
+            Player2.setText(Player2Input.getText());
+            tourneyFormat.setText(formatInput.getText());
+            tourneyRound.setText(roundInput.getText());
+            if(pickTourney.getSelectedItem().toString() == "Antibodied")
+                bottomTourneyName.setText("ANTIBODIED #" + numberInput.getText());
+            if(pickTourney.getSelectedItem().toString() == "Run It Back")
+                bottomTourneyName.setText("RUN IT BACK #" + numberInput.getText());
+            if(pickTourney.getSelectedItem().toString() == "Recharged")
+                bottomTourneyName.setText(numberInput.getText());
+            date.setText(dateInput.getText());
+            Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
+            Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
+            setChordsForImg(Player1Char1.getSelectedItem().toString(), 1);
+            setChordsForImg(Player2Char1.getSelectedItem().toString(), 2);
+            makeScreenShot(this);
+        });
+
+        pickTourney.addActionListener (new ActionListener () {
+            public void actionPerformed(ActionEvent e) {
+                if(pickTourney.getSelectedItem().toString() == "Antibodied") {
+                    try {
+                        topTourneyImg.setEnabled(false);
+                        anti_loadAssets();
+                        background.add(topTourneyName);
+                        background.add(subtitle);
+                        background.add(tourneyFormat);
+                        background.add(tourneyRound);
+                        background.add(VS);
+                        background.add(Player1);
+                        background.add(Player2);
+                        background.add(Player1Back);
+                        background.add(Player2Back);
+                        background.add(bottomTourneyName);
+                        background.add(smashLogo);
+                        background.add(date);
+                        background.add(bar);
+                        background.add(Player1Img1);
+                        background.add(Player2Img1);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                if(pickTourney.getSelectedItem().toString() == "Run It Back") {
+                    try {
+                        topTourneyImg.setEnabled(true);
+                        run_loadAssets();
+                        background.add(topTourneyName);
+                        background.add(subtitle);
+                        background.add(tourneyFormat);
+                        background.add(tourneyRound);
+                        background.add(VS);
+                        background.add(Player1);
+                        background.add(Player2);
+                        background.add(Player1Back);
+                        background.add(Player2Back);
+                        background.add(bottomTourneyName);
+                        background.add(smashLogo);
+                        background.add(date);
+                        background.add(bar);
+                        background.add(Player1Img1);
+                        background.add(Player2Img1);
+                        background.add(topTourneyImg);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                if(pickTourney.getSelectedItem().toString() == "Recharged") {
+                    try {
+                        topTourneyImg.setEnabled(true);
+                        rechar_loadAssets();
+                        background.add(topTourneyImg);
+                        background.add(bottomTourneyName);
+                        background.add(topTourneyName);
+                        background.add(subtitle);
+                        background.add(tourneyFormat);
+                        background.add(tourneyRound);
+                        background.add(VS);
+                        background.add(Player1);
+                        background.add(Player2);
+                        background.add(Player1Back);
+                        background.add(date);
+                        background.add(Player1Img1);
+                        background.add(Player2Img1);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        controls.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(1294, 757);
+        setVisible(true);
+        controls.setVisible(true);
+        setLocationRelativeTo(null);
+    }
+
+    private void addToBackgroundStart() {
+        background.add(topTourneyName);
+        background.add(subtitle);
+        background.add(tourneyFormat);
+        background.add(tourneyRound);
+        background.add(VS);
+        background.add(Player1);
+        background.add(Player2);
+        background.add(Player1Back);
+        background.add(Player2Back);
+        background.add(bottomTourneyName);
+        background.add(smashLogo);
+        background.add(date);
+        background.add(bar);
+        background.add(Player1Img1);
+        background.add(Player2Img1);
+    }
+    //Loads in the images and the text
+    private void anti_loadAssetsStart() throws IOException {
+        //Loads in the images
         BufferedImage myPicture = ImageIO.read(new File("Antibodied/Background.png"));
+        BufferedImage title = ImageIO.read(new File("Run It Back/Title.png"));
         BufferedImage blackBar = ImageIO.read(new File("Antibodied/Rectangle.png"));
         BufferedImage logo = ImageIO.read(new File("Antibodied/Smash Ultimate Logo.png"));
         BufferedImage Player1Img = ImageIO.read(new File("Antibodied/Rectangle 3.png"));
@@ -70,6 +203,9 @@ public class Test extends JFrame{
 
         background = new JLabel(new ImageIcon(myPicture));
 
+        topTourneyImg = new JLabel(new ImageIcon(title));
+        topTourneyImg.setBounds(568, 11, 160, 154);
+
         bar = new JLabel(new ImageIcon(blackBar));
         bar.setBounds(0,660, 1280, 70);
 
@@ -82,71 +218,10 @@ public class Test extends JFrame{
         Player2Back = new JLabel(new ImageIcon(Player2Img));
         Player2Back.setBounds(773, 440, 507, 92);
 
-        Player1Input = new JTextField();
-        Player1Input.setBounds(10,40,100,30);
-
-        Player1Label = new JLabel("Player 1 Name: ");
-        Player1Label.setBounds(10, 10, 100, 30);
-
-        Player2Input = new JTextField();
-        Player2Input.setBounds(290,40,100,30);
-
-        Player2Label = new JLabel("Player 2 Name: ");
-        Player2Label.setBounds(290, 10, 100, 30);
-
-        formatInput = new JTextField();
-        formatInput.setBounds(10, 90, 100, 30);
-
-        formatLabel = new JLabel("Tournament Format: ");
-        formatLabel.setBounds(10, 60, 200, 30);
-
-        roundInput = new JTextField();
-        roundInput.setBounds(290, 90, 100, 30);
-
-        roundLabel = new JLabel("Current Round: ");
-        roundLabel.setBounds(290, 60, 200, 30);
-
-        numberInput = new JTextField();
-        numberInput.setBounds(10, 140, 100, 30);
-
-        numberLabel = new JLabel("Tournament Number: ");
-        numberLabel.setBounds(10, 110, 200, 30);
-
-        dateInput = new JTextField();
-        dateInput.setBounds(290, 140, 100, 30);
-
-        dateLabel = new JLabel("Date of Tournament: ");
-        dateLabel.setBounds(290, 110, 200, 30);
-
-        Player1Char1 = new JComboBox(allCharacters);
-        Player1Char1.setBounds(10, 190, 200, 30);
-
-        Player1Char1Label = new JLabel("Player 1 Character 1");
-        Player1Char1Label.setBounds(10, 160, 200, 30);
-
-        Player1Char2 = new JComboBox(allCharacters);
-        Player1Char2.setBounds(10, 240, 200, 30);
-
-        Player1Char2Label = new JLabel("Player 1 Character 2");
-        Player1Char2Label.setBounds(10, 215, 200, 30);
-
-        Player2Char1 = new JComboBox(allCharacters);
-        Player2Char1.setBounds(290, 190, 200, 30);
-
-        Player2Char1Label = new JLabel("Player 2 Character 1");
-        Player2Char1Label.setBounds(290, 160, 200, 30);
-
-        Player2Char2 = new JComboBox(allCharacters);
-        Player2Char2.setBounds(290, 240, 200, 30);
-
-        Player2Char2Label = new JLabel("Player 2 Character 2");
-        Player2Char2Label.setBounds(290, 215, 200, 30);
-
-        submit = new JButton("Generate");
-        submit.setBounds(10,280, 100, 30);
 
 
-        bottomTourneyName = new JLabel("ANTIBODIED #3");
+        //Loads in the text
+        bottomTourneyName = new JLabel("ANTIBODIED #3", SwingConstants.CENTER);
         bottomTourneyName.setForeground(Color.WHITE);
         bottomTourneyName.setBounds(10,650, 400, 80);
         bottomTourneyName.setFont(LemonMilk40);
@@ -190,6 +265,321 @@ public class Test extends JFrame{
         Player2.setForeground(Color.BLACK);
         Player2.setBounds(800, 440, 507, 100);
         Player2.setFont(Bebas100);
+    }
+
+    private void anti_loadAssets() throws IOException {
+        //Loads in the images
+        BufferedImage myPicture = ImageIO.read(new File("Antibodied/Background.png"));
+        BufferedImage blackBar = ImageIO.read(new File("Antibodied/Rectangle.png"));
+        BufferedImage title = ImageIO.read(new File("Recharged/Title.png"));
+        BufferedImage logo = ImageIO.read(new File("Antibodied/Smash Ultimate Logo.png"));
+        BufferedImage Player1Img = ImageIO.read(new File("Antibodied/Rectangle 3.png"));
+        BufferedImage Player2Img = ImageIO.read(new File("Antibodied/Rectangle 3 copy.png"));
+        BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
+        BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        background.remove(topTourneyImg);
+
+        Yoda1 = scale1(Yoda1, 0.5);
+        Beast1 = scale1(Beast1, 0.8);
+        Player1Img1.setIcon(new ImageIcon(Yoda1));
+        Player1Img1.setBounds(-110, 0, 760, 850);
+
+        Player2Img1.setIcon(new ImageIcon(Beast1));
+        Player2Img1.setBounds(666, 0, 760, 850);
+
+        background.setIcon(new ImageIcon(myPicture));
+
+        bar.setIcon(new ImageIcon(blackBar));
+        bar.setBounds(0,660, 1280, 70);
+
+        smashLogo.setIcon(new ImageIcon(logo));
+        smashLogo.setBounds(491, 590, 303, 130);
+
+        Player1Back.setIcon(new ImageIcon(Player1Img));
+        Player1Back.setBounds(0, 440, 551, 92);
+
+        Player2Back.setIcon(new ImageIcon(Player2Img));
+        Player2Back.setBounds(773, 440, 507, 92);
+
+        //topTourneyImg.setIcon(new ImageIcon(title));
+        //topTourneyImg.setBounds(468, -50, 360, 354);
+        //topTourneyImg.setEnabled(false);
+
+
+
+        //Loads in the text
+        bottomTourneyName.setText("ANTIBODIED #3");
+        bottomTourneyName.setForeground(Color.WHITE);
+        bottomTourneyName.setBounds(10,650, 400, 80);
+        bottomTourneyName.setFont(LemonMilk40);
+
+        date.setText("11/20/2021");
+        date.setForeground(Color.WHITE);
+        date.setBounds(992, 663, 236, 52);
+        date.setFont(LemonMilk40);
+
+        VS.setText("VS");
+        VS.setForeground(Color.BLACK);
+        VS.setBounds(520, 342, 222, 293);
+        VS.setFont(Bebas200);
+
+        tourneyFormat.setText("Singles");
+        tourneyFormat.setForeground(Color.BLACK);
+        tourneyFormat.setBounds(509,180, 243, 94);
+        tourneyFormat.setFont(Bebas80);
+
+        tourneyRound.setText("Grand Finals");
+        tourneyRound.setForeground(Color.BLACK);
+        tourneyRound.setBounds(-40, 253, 1280, 94);
+        tourneyRound.setFont(Bebas80);
+
+        topTourneyName.setText("ANTIBODIED");
+        topTourneyName.setForeground(Color.BLACK);
+        topTourneyName.setBounds(388, 0, 508, 146);
+        topTourneyName.setFont(Bebas125);
+
+        subtitle.setText("South Jersey SSBU Monthly");
+        subtitle.setForeground(Color.BLACK);
+        subtitle.setBounds(480, 115, 416, 50);
+        subtitle.setFont(LemonMilk20);
+
+        Player1.setText("YODA CAGE [W]");
+        Player1.setForeground(Color.BLACK);
+        Player1.setBounds(10, 440, 480, 100);
+        Player1.setFont(Bebas100);
+
+        Player2.setText("BEAST [L]");
+        Player2.setForeground(Color.BLACK);
+        Player2.setBounds(800, 440, 507, 100);
+        Player2.setFont(Bebas100);
+    }
+
+    private void run_loadAssets() throws IOException {
+        //Loads in the images
+        BufferedImage myPicture = ImageIO.read(new File("Run It Back/Background.png"));
+        BufferedImage title = ImageIO.read(new File("Run It Back/Title.png"));
+        BufferedImage blackBar = ImageIO.read(new File("Run It Back/Rectangle.png"));
+        BufferedImage logo = ImageIO.read(new File("Run It Back/Smash Ultimate Logo.png"));
+        BufferedImage Player1Img = ImageIO.read(new File("Run It Back/Rectangle 3.png"));
+        BufferedImage Player2Img = ImageIO.read(new File("Run It Back/Rectangle 3 copy.png"));
+        BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
+        BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        Yoda1 = scale1(Yoda1, 0.5);
+        Beast1 = scale1(Beast1, 0.8);
+        Player1Img1.setIcon(new ImageIcon(Yoda1));
+        Player1Img1.setBounds(-110, 0, 760, 850);
+
+        Player2Img1.setIcon(new ImageIcon(Beast1));
+        Player2Img1.setBounds(666, 0, 760, 850);
+
+        background.setIcon(new ImageIcon(myPicture));
+
+        topTourneyImg.setIcon(new ImageIcon(title));
+        topTourneyImg.setBounds(468, -50, 360, 354);
+
+        bar.setIcon(new ImageIcon(blackBar));
+        bar.setBounds(0,660, 1280, 70);
+
+        smashLogo.setIcon(new ImageIcon(logo));
+        smashLogo.setBounds(445, 490, 400, 250);
+
+        Player1Back.setIcon(new ImageIcon(Player1Img));
+        Player1Back.setBounds(0, 440, 551, 92);
+
+        Player2Back.setIcon(new ImageIcon(Player2Img));
+        Player2Back.setBounds(773, 440, 507, 92);
+
+
+
+        //Loads in the text
+        bottomTourneyName.setText("RUN IT BACK #8");
+        bottomTourneyName.setForeground(Color.WHITE);
+        bottomTourneyName.setBounds(10,650, 400, 80);
+        bottomTourneyName.setFont(LemonMilk40);
+
+        date.setText("07/11/2021");
+        date.setForeground(Color.WHITE);
+        date.setBounds(992, 663, 236, 52);
+        date.setFont(LemonMilk40);
+
+        VS.setText("VS");
+        VS.setForeground(Color.WHITE);
+        VS.setBounds(520, 342, 222, 293);
+        VS.setFont(Bebas200);
+
+        tourneyFormat.setText("Singles");
+        tourneyFormat.setForeground(Color.WHITE);
+        tourneyFormat.setBounds(549,180, 243, 94);
+        tourneyFormat.setFont(Bebas80);
+
+        tourneyRound.setText("Grand Finals");
+        tourneyRound.setForeground(Color.WHITE);
+        tourneyRound.setBounds(0, 253, 1280, 94);
+        tourneyRound.setFont(Bebas80);
+
+        //There is an image in place of the tourney name
+        topTourneyName.setText("");
+        topTourneyName.setForeground(Color.BLACK);
+        topTourneyName.setBounds(388, 0, 508, 146);
+        topTourneyName.setFont(Bebas125);
+
+        //There is no subtitle
+        subtitle.setText("");
+        subtitle.setForeground(Color.BLACK);
+        subtitle.setBounds(480, 115, 416, 50);
+        subtitle.setFont(LemonMilk20);
+
+        Player1.setText("Syrup [W]");
+        Player1.setForeground(Color.BLACK);
+        Player1.setBounds(10, 440, 480, 100);
+        Player1.setFont(Bebas100);
+
+        Player2.setText("ConCon [L]");
+        Player2.setForeground(Color.BLACK);
+        Player2.setBounds(800, 440, 507, 100);
+        Player2.setFont(Bebas100);
+    }
+
+    private void rechar_loadAssets() throws IOException {
+        //Loads in the images
+        BufferedImage myPicture = ImageIO.read(new File("Recharged/Background.png"));
+        BufferedImage title = ImageIO.read(new File("Recharged/Title.png"));
+        BufferedImage PlayerImg = ImageIO.read(new File("Recharged/Rectangle 3.png"));
+        BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
+        BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        background.remove(bar);
+        background.remove(smashLogo);
+        background.remove(Player2Back);
+
+        Yoda1 = scale1(Yoda1, 0.5);
+        Beast1 = scale1(Beast1, 0.8);
+        Player1Img1.setIcon(new ImageIcon(Yoda1));
+        Player1Img1.setBounds(-110, 0, 760, 850);
+
+        Player2Img1.setIcon(new ImageIcon(Beast1));
+        Player2Img1.setBounds(666, 0, 760, 850);
+
+        background.setIcon(new ImageIcon(myPicture));
+
+        title = scale1(title, 0.9);
+        topTourneyImg.setIcon(new ImageIcon(title));
+        topTourneyImg.setBounds(400, 150, 472, 410);
+
+        Player1Back.setIcon(new ImageIcon(PlayerImg));
+        Player1Back.setBounds(0, 440, 1294, 132);
+
+
+
+        //Loads in the text
+        bottomTourneyName.setText("87");
+        bottomTourneyName.setHorizontalAlignment(SwingConstants.CENTER);
+        bottomTourneyName.setForeground(Color.WHITE);
+        bottomTourneyName.setBounds(565,250, 150, 293);
+        bottomTourneyName.setFont(Agency100);
+
+        date.setText("02/13/2022");
+        date.setForeground(Color.WHITE);
+        date.setBounds(538, 100, 236, 52);
+        date.setFont(Agency50);
+
+        VS.setText("");
+        VS.setForeground(Color.WHITE);
+        VS.setBounds(520, 342, 222, 293);
+        VS.setFont(Bebas200);
+
+        tourneyFormat.setText("");
+        tourneyFormat.setForeground(Color.WHITE);
+        tourneyFormat.setBounds(549,180, 243, 94);
+        tourneyFormat.setFont(Bebas80);
+
+        tourneyRound.setText("Grand Finals");
+        tourneyRound.setForeground(Color.WHITE);
+        tourneyRound.setBounds(0, 10, 1280, 94);
+        tourneyRound.setFont(Agency100);
+
+        //There is an image in place of the tourney name
+        topTourneyName.setText("");
+        topTourneyName.setForeground(Color.BLACK);
+        topTourneyName.setBounds(388, 0, 508, 146);
+        topTourneyName.setFont(Bebas125);
+
+        //There is no subtitle
+        subtitle.setText("");
+        subtitle.setForeground(Color.BLACK);
+        subtitle.setBounds(480, 115, 416, 50);
+        subtitle.setFont(LemonMilk20);
+
+        Player1.setText("Syrup [W]");
+        Player1.setForeground(Color.WHITE);
+        Player1.setBounds(10, 425, 480, 150);
+        Player1.setFont(Agency100);
+
+        Player2.setText("ConCon [L]");
+        Player2.setForeground(Color.WHITE);
+        Player2.setBounds(800, 425, 507, 150);
+        Player2.setFont(Agency100);
+    }
+    
+    private void loadControls() {
+        Player1Input = new JTextField();
+        Player1Input.setBounds(10,40,100,30);
+
+        Player1Label = new JLabel("Player 1 Name: ");
+        Player1Label.setBounds(10, 10, 100, 30);
+
+        Player2Input = new JTextField();
+        Player2Input.setBounds(290,40,100,30);
+
+        Player2Label = new JLabel("Player 2 Name: ");
+        Player2Label.setBounds(290, 10, 100, 30);
+
+        formatInput = new JTextField();
+        formatInput.setBounds(10, 90, 100, 30);
+
+        formatLabel = new JLabel("Tournament Format: ");
+        formatLabel.setBounds(10, 60, 200, 30);
+
+        roundInput = new JTextField();
+        roundInput.setBounds(290, 90, 100, 30);
+
+        roundLabel = new JLabel("Current Round: ");
+        roundLabel.setBounds(290, 60, 200, 30);
+
+        numberInput = new JTextField();
+        numberInput.setBounds(10, 140, 100, 30);
+
+        numberLabel = new JLabel("Tournament Number: ");
+        numberLabel.setBounds(10, 110, 200, 30);
+
+        dateInput = new JTextField();
+        dateInput.setBounds(290, 140, 100, 30);
+
+        dateLabel = new JLabel("Date of Tournament: ");
+        dateLabel.setBounds(290, 110, 200, 30);
+
+        Player1Char1 = new JComboBox(allCharacters);
+        Player1Char1.setBounds(10, 190, 200, 30);
+
+        Player1Char1Label = new JLabel("Player 1 Character 1");
+        Player1Char1Label.setBounds(10, 165, 200, 30);
+
+        Player2Char1 = new JComboBox(allCharacters);
+        Player2Char1.setBounds(290, 190, 200, 30);
+
+        Player2Char1Label = new JLabel("Player 2 Character 1");
+        Player2Char1Label.setBounds(290, 165, 200, 30);
+
+        pickTourney = new JComboBox(tourneys);
+        pickTourney.setBounds(10,240, 200, 30);
+
+        pickLabel = new JLabel("Current Tournament:");
+        pickLabel.setBounds(10, 215, 200, 30);
+
+        submit = new JButton("Generate");
+        submit.setBounds(10,280, 100, 30);
 
         controlBackground.add(Player1Label);
         controlBackground.add(Player2Label);
@@ -205,61 +595,11 @@ public class Test extends JFrame{
         controlBackground.add(dateInput);
         controlBackground.add(Player1Char1);
         controlBackground.add(Player1Char1Label);
-        //controlBackground.add(Player1Char2);
-        //controlBackground.add(Player1Char2Label);
         controlBackground.add(Player2Char1);
         controlBackground.add(Player2Char1Label);
-        //controlBackground.add(Player2Char2);
-        //controlBackground.add(Player2Char2Label);
+        controlBackground.add(pickTourney);
+        controlBackground.add(pickLabel);
         controlBackground.add(submit);
-
-        add(background);
-        background.add(topTourneyName);
-        background.add(subtitle);
-        background.add(tourneyFormat);
-        background.add(tourneyRound);
-        background.add(VS);
-        background.add(Player1);
-        background.add(Player2);
-        background.add(Player1Back);
-        background.add(Player2Back);
-        background.add(bottomTourneyName);
-        background.add(smashLogo);
-        background.add(date);
-        background.add(bar);
-        background.add(Player1Img1);
-        background.add(Player2Img1);
-
-
-
-        submit.addActionListener(e -> {
-            Player1.setText(Player1Input.getText());
-            Player2.setText(Player2Input.getText());
-            tourneyFormat.setText(formatInput.getText());
-            tourneyRound.setText(roundInput.getText());
-            bottomTourneyName.setText("ANTIBODIED #" + numberInput.getText());
-            date.setText(dateInput.getText());
-            Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
-            Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
-            setChordsForImg(Player1Char1.getSelectedItem().toString(), 1);
-            setChordsForImg(Player2Char1.getSelectedItem().toString(), 2);
-            makeScreenShot(this);
-        });
-
-
-        Player2Char2.addActionListener (new ActionListener () {
-            public void actionPerformed(ActionEvent e) {
-                Player1Img1.setBounds(-110, 0, 760, 850);
-            }
-        });
-
-
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        controls.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1294, 757);
-        setVisible(true);
-        controls.setVisible(true);
-        setLocationRelativeTo(null);
     }
 
     private void setChordsForImg(String name, int player) {
