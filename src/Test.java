@@ -14,7 +14,7 @@ public class Test extends JFrame{
     private JLabel background, controlBackground;
     private JLabel bar;
     private JLabel Player1, Player2, bottomTourneyName, smashLogo, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle, topTourneyImg;
-    private JLabel Player1Back, Player2Back;
+    private JLabel Player1Back, Player2Back, Player1Outline, Player2Outline;
     private JLabel Player1Img1, Player1Img2, Player2Img1, Player2Img2;
     private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel, Player1Char1Label, Player2Char1Label, pickLabel;
     private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
@@ -24,6 +24,8 @@ public class Test extends JFrame{
     private Font Bebas200, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
     private Font LemonMilk40, LemonMilk20;
     private Font Agency100, Agency50;
+    private Font UraeNium200, UraeNium100, UraeNium50;
+    private Font Market100;
 
     private JFrame controls;
 
@@ -31,7 +33,7 @@ public class Test extends JFrame{
         super("Thumbnail Generator");
         //Load character names into the array allCharacters
         allCharacters = initCharacters();
-        tourneys = new String[]{"Antibodied", "Run It Back", "Recharged"};
+        tourneys = new String[]{"Antibodied", "Run It Back", "Recharged", "GOYF"};
 
         //Set up the control panel frame
         controls = new JFrame("Controls");
@@ -52,6 +54,10 @@ public class Test extends JFrame{
             LemonMilk20 = Font.createFont(Font.TRUETYPE_FONT, new File("LemonMilklight.otf")).deriveFont(20f);
             Agency100 = Font.createFont(Font.TRUETYPE_FONT, new File("AGENCYB.ttf")).deriveFont(100f);
             Agency50 = Font.createFont(Font.TRUETYPE_FONT, new File("AGENCYB.ttf")).deriveFont(50f);
+            UraeNium200 = Font.createFont(Font.TRUETYPE_FONT, new File("urae_nium.ttf")).deriveFont(200f);
+            UraeNium100 = Font.createFont(Font.TRUETYPE_FONT, new File("urae_nium.ttf")).deriveFont(100f);
+            UraeNium50 = Font.createFont(Font.TRUETYPE_FONT, new File("urae_nium.ttf")).deriveFont(50f);
+            Market100 = Font.createFont(Font.TRUETYPE_FONT, new File("Market_Deco.ttf")).deriveFont(100f);
         } catch (FontFormatException e) {
             e.printStackTrace();
         }
@@ -73,7 +79,7 @@ public class Test extends JFrame{
                 bottomTourneyName.setText("ANTIBODIED #" + numberInput.getText());
             if(pickTourney.getSelectedItem().toString() == "Run It Back")
                 bottomTourneyName.setText("RUN IT BACK #" + numberInput.getText());
-            if(pickTourney.getSelectedItem().toString() == "Recharged")
+            if(pickTourney.getSelectedItem().toString() == "Recharged" || pickTourney.getSelectedItem().toString() == "GOYF")
                 bottomTourneyName.setText(numberInput.getText());
             date.setText(dateInput.getText());
             Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
@@ -146,6 +152,26 @@ public class Test extends JFrame{
                         background.add(Player1);
                         background.add(Player2);
                         background.add(Player1Back);
+                        background.add(date);
+                        background.add(Player1Img1);
+                        background.add(Player2Img1);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                if(pickTourney.getSelectedItem().toString() == "GOYF") {
+                    try {
+                        topTourneyImg.setEnabled(true);
+                        goyf_loadAssets();
+                        background.add(bottomTourneyName);
+                        background.add(topTourneyImg);
+                        background.add(topTourneyName);
+                        background.add(tourneyRound);
+                        background.add(VS);
+                        background.add(Player1);
+                        background.add(Player2);
+                        background.add(Player1Back);
+                        background.add(Player2Back);
                         background.add(date);
                         background.add(Player1Img1);
                         background.add(Player2Img1);
@@ -521,6 +547,88 @@ public class Test extends JFrame{
         Player2.setForeground(Color.WHITE);
         Player2.setBounds(800, 425, 507, 150);
         Player2.setFont(Agency100);
+    }
+
+    private void goyf_loadAssets() throws IOException {
+        //Loads in the images
+        BufferedImage myPicture = ImageIO.read(new File("Goyf/Background.png"));
+        BufferedImage title = ImageIO.read(new File("Goyf/Title.png"));
+        BufferedImage Player1Img = ImageIO.read(new File("Goyf/Rectangle 3.png"));
+        BufferedImage Player2Img = ImageIO.read(new File("Goyf/Rectangle 3 copy.png"));
+        BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
+        BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        background.remove(bar);
+        background.remove(smashLogo);
+
+        Yoda1 = scale1(Yoda1, 0.5);
+        Beast1 = scale1(Beast1, 0.8);
+        Player1Img1.setIcon(new ImageIcon(Yoda1));
+        Player1Img1.setBounds(-110, 0, 760, 850);
+
+        Player2Img1.setIcon(new ImageIcon(Beast1));
+        Player2Img1.setBounds(666, 0, 760, 850);
+
+        background.setIcon(new ImageIcon(myPicture));
+
+        topTourneyImg.setIcon(new ImageIcon(title));
+        topTourneyImg.setBounds(230, -80, 820, 410);
+
+        Player1Back.setIcon(new ImageIcon(Player1Img));
+        Player1Back.setBounds(15, 440, 600, 132);
+
+        Player2Back.setIcon(new ImageIcon(Player2Img));
+        Player2Back.setBounds(660, 440, 600, 132);
+
+
+
+        //Loads in the text
+        bottomTourneyName.setText("25");
+        bottomTourneyName.setForeground(Color.WHITE);
+        bottomTourneyName.setBounds(905,-10, 150, 293);
+        bottomTourneyName.setFont(UraeNium200);
+
+        date.setText("05-23-2021");
+        date.setForeground(Color.WHITE);
+        date.setBounds(20, 675, 236, 52);
+        date.setFont(UraeNium50);
+
+        VS.setText("VS");
+        VS.setForeground(Color.BLACK);
+        VS.setBounds(595, 363, 222, 293);
+        VS.setFont(UraeNium200);
+
+        tourneyFormat.setText("");
+        tourneyFormat.setForeground(Color.BLACK);
+        tourneyFormat.setBounds(549,180, 243, 94);
+        tourneyFormat.setFont(Bebas80);
+
+        tourneyRound.setText("Winners Finals");
+        tourneyRound.setForeground(Color.WHITE);
+        tourneyRound.setBounds(0, 255, 1280, 100);
+        tourneyRound.setFont(UraeNium100);
+
+        //There is an image in place of the tourney name
+        topTourneyName.setText("");
+        topTourneyName.setForeground(Color.BLACK);
+        topTourneyName.setBounds(388, 0, 508, 146);
+        topTourneyName.setFont(Bebas125);
+
+        //There is no subtitle
+        subtitle.setText("");
+        subtitle.setForeground(Color.BLACK);
+        subtitle.setBounds(480, 115, 416, 50);
+        subtitle.setFont(LemonMilk20);
+
+        Player1.setText("Lights");
+        Player1.setForeground(Color.BLACK);
+        Player1.setBounds(10, 435, 480, 150);
+        Player1.setFont(Market100);
+
+        Player2.setText("Ace$");
+        Player2.setForeground(Color.BLACK);
+        Player2.setBounds(725, 435, 507, 150);
+        Player2.setFont(Market100);
     }
     
     private void loadControls() {
