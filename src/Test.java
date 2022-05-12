@@ -14,14 +14,14 @@ public class Test extends JFrame{
     private JLabel background, controlBackground;
     private JLabel bar;
     private JLabel Player1, Player2, bottomTourneyName, smashLogo, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle, topTourneyImg;
-    private JLabel Player1Back, Player2Back, Player1Outline, Player2Outline;
+    private JLabel Player1Back, Player2Back, roundBackground, NPTLogo, smashgg, bigTourneyNum;
     private JLabel Player1Img1, Player1Img2, Player2Img1, Player2Img2;
     private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel, Player1Char1Label, Player2Char1Label, pickLabel;
     private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
     private JComboBox Player1Char1, Player2Char1, pickTourney;
     private String allCharacters[], tourneys[];
     private JButton submit;
-    private Font Bebas200, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
+    private Font Bebas200, Bebas200real, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
     private Font LemonMilk40, LemonMilk20;
     private Font Agency100, Agency50;
     private Font UraeNium200, UraeNium100, UraeNium50;
@@ -33,7 +33,7 @@ public class Test extends JFrame{
         super("Thumbnail Generator");
         //Load character names into the array allCharacters
         allCharacters = initCharacters();
-        tourneys = new String[]{"Antibodied", "Run It Back", "Recharged", "GOYF"};
+        tourneys = new String[]{"Antibodied", "Run It Back", "Recharged", "GOYF", "No Dice"};
 
         //Set up the control panel frame
         controls = new JFrame("Controls");
@@ -45,6 +45,7 @@ public class Test extends JFrame{
         //Loads the fonts and font sizes
         try {
             Bebas200 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(270f);
+            Bebas200real = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(200f);
             Bebas125 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(125f);
             Bebas100 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(100f);
             Bebas80 = Font.createFont(Font.TRUETYPE_FONT, new File("BebasNeue-Regular.otf")).deriveFont(80f);
@@ -81,6 +82,11 @@ public class Test extends JFrame{
                 bottomTourneyName.setText("RUN IT BACK #" + numberInput.getText());
             if(pickTourney.getSelectedItem().toString() == "Recharged" || pickTourney.getSelectedItem().toString() == "GOYF")
                 bottomTourneyName.setText(numberInput.getText());
+            if(pickTourney.getSelectedItem().toString() == "No Dice") {
+                bottomTourneyName.setText("NO DICE #" + numberInput.getText());
+                smashgg.setText("Smash.gg/nodice" + numberInput.getText());
+                bigTourneyNum.setText("#" + numberInput.getText());
+            }
             date.setText(dateInput.getText());
             Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
             Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
@@ -93,7 +99,11 @@ public class Test extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if(pickTourney.getSelectedItem().toString() == "Antibodied") {
                     try {
+                        NPTLogo.setVisible(false);
+                        roundBackground.setVisible(false);
+                        smashgg.setVisible(false);
                         topTourneyImg.setEnabled(false);
+                        bigTourneyNum.setVisible(false);
                         anti_loadAssets();
                         background.add(topTourneyName);
                         background.add(subtitle);
@@ -116,7 +126,11 @@ public class Test extends JFrame{
                 }
                 if(pickTourney.getSelectedItem().toString() == "Run It Back") {
                     try {
+                        NPTLogo.setVisible(false);
+                        roundBackground.setVisible(false);
+                        smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
+                        bigTourneyNum.setVisible(false);
                         run_loadAssets();
                         background.add(topTourneyName);
                         background.add(subtitle);
@@ -140,7 +154,11 @@ public class Test extends JFrame{
                 }
                 if(pickTourney.getSelectedItem().toString() == "Recharged") {
                     try {
+                        NPTLogo.setVisible(false);
+                        roundBackground.setVisible(false);
+                        smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
+                        bigTourneyNum.setVisible(false);
                         rechar_loadAssets();
                         background.add(topTourneyImg);
                         background.add(bottomTourneyName);
@@ -161,7 +179,11 @@ public class Test extends JFrame{
                 }
                 if(pickTourney.getSelectedItem().toString() == "GOYF") {
                     try {
+                        NPTLogo.setVisible(false);
+                        roundBackground.setVisible(false);
+                        smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
+                        bigTourneyNum.setVisible(false);
                         goyf_loadAssets();
                         background.add(bottomTourneyName);
                         background.add(topTourneyImg);
@@ -175,6 +197,36 @@ public class Test extends JFrame{
                         background.add(date);
                         background.add(Player1Img1);
                         background.add(Player2Img1);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                if(pickTourney.getSelectedItem().toString() == "No Dice") {
+                    try {
+                        topTourneyImg.setEnabled(true);
+                        NPTLogo.setVisible(true);
+                        roundBackground.setVisible(true);
+                        smashgg.setVisible(true);
+                        bigTourneyNum.setVisible(true);
+                        dice_loadAssets();
+                        background.add(bottomTourneyName);
+                        background.add(topTourneyName);
+                        background.add(tourneyRound);
+                        background.add(VS);
+                        background.add(Player1);
+                        background.add(Player2);
+                        background.add(Player1Back);
+                        background.add(Player2Back);
+                        background.add(date);
+                        background.add(NPTLogo);
+                        background.add(roundBackground);
+                        background.add(smashgg);
+                        background.add(bar);
+                        background.add(Player1Img1);
+                        background.add(Player2Img1);
+                        background.add(smashLogo);
+                        background.add(bigTourneyNum);
+                        background.add(topTourneyImg);
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
@@ -212,6 +264,8 @@ public class Test extends JFrame{
         //Loads in the images
         BufferedImage myPicture = ImageIO.read(new File("Antibodied/Background.png"));
         BufferedImage title = ImageIO.read(new File("Run It Back/Title.png"));
+        BufferedImage forRound = ImageIO.read(new File("No Dice/For Round.png"));
+        BufferedImage nptLogo = ImageIO.read(new File("No Dice/NPT Logo White.png"));
         BufferedImage blackBar = ImageIO.read(new File("Antibodied/Rectangle.png"));
         BufferedImage logo = ImageIO.read(new File("Antibodied/Smash Ultimate Logo.png"));
         BufferedImage Player1Img = ImageIO.read(new File("Antibodied/Rectangle 3.png"));
@@ -244,9 +298,23 @@ public class Test extends JFrame{
         Player2Back = new JLabel(new ImageIcon(Player2Img));
         Player2Back.setBounds(773, 440, 507, 92);
 
+        roundBackground = new JLabel(new ImageIcon(forRound));
+        roundBackground.setBounds(10,440, 500, 90);
+
+        NPTLogo = new JLabel(new ImageIcon(nptLogo));
+        NPTLogo.setBounds(540, 715, 49, 42);
+
 
 
         //Loads in the text
+        smashgg = new JLabel("Smash.gg/NoDice1");
+        smashgg.setBounds(500, 600, 200, 100);
+
+        bigTourneyNum = new JLabel("#1");
+        bigTourneyNum.setForeground(Color.getHSBColor(48,24,100));
+        bigTourneyNum.setBounds(115, 420, 400, 400);
+        bigTourneyNum.setFont(Bebas200);
+
         bottomTourneyName = new JLabel("ANTIBODIED #3", SwingConstants.CENTER);
         bottomTourneyName.setForeground(Color.WHITE);
         bottomTourneyName.setBounds(10,650, 400, 80);
@@ -630,6 +698,113 @@ public class Test extends JFrame{
         Player2.setBounds(725, 435, 507, 150);
         Player2.setFont(Market100);
     }
+
+    private void dice_loadAssets() throws IOException {
+        //Loads in the images
+        BufferedImage myPicture = ImageIO.read(new File("No Dice/Background.png"));
+        BufferedImage title = ImageIO.read(new File("No Dice/Title.png"));
+        BufferedImage logo = ImageIO.read(new File("No Dice/Smash Ultimate Logo.png"));
+        BufferedImage forRound = ImageIO.read(new File("No Dice/For Round.png"));
+        BufferedImage nptLogo = ImageIO.read(new File("No Dice/NPT Logo White.png"));
+        BufferedImage Player1Img = ImageIO.read(new File("No Dice/Rectangle 3.png"));
+        BufferedImage Player2Img = ImageIO.read(new File("No Dice/Rectangle 3 copy.png"));
+        BufferedImage bottom = ImageIO.read(new File("No Dice/bottom.png"));
+        BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
+        BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        Yoda1 = scale1(Yoda1, 0.5);
+        Beast1 = scale1(Beast1, 0.8);
+        Player1Img1.setIcon(new ImageIcon(Yoda1));
+        Player1Img1.setBounds(300, 0, 760, 850);
+
+        Player2Img1.setIcon(new ImageIcon(Beast1));
+        Player2Img1.setBounds(685, 0, 760, 850);
+
+        background.setIcon(new ImageIcon(myPicture));
+
+        title = scale1(title, 0.8);
+        topTourneyImg.setIcon(new ImageIcon(title));
+        topTourneyImg.setBounds(30, 110, 420, 410);
+
+        Player1Back.setIcon(new ImageIcon(Player1Img));
+        Player1Back.setBounds(516, 440, 320, 55);
+
+        Player2Back.setIcon(new ImageIcon(Player2Img));
+        Player2Back.setBounds(913, 440, 320, 55);
+
+        smashLogo.setIcon(new ImageIcon(logo));
+        smashLogo.setBounds(45, 30, 400, 150);
+
+        bar.setIcon(new ImageIcon(bottom));
+        bar.setBounds(0, 600, 1280, 200);
+
+        roundBackground = new JLabel(new ImageIcon(forRound));
+        roundBackground.setBounds(10,440, 500, 55);
+
+        NPTLogo = new JLabel(new ImageIcon(nptLogo));
+        NPTLogo.setBounds(675, 680, 49, 42);
+
+
+
+        //Loads in the text
+        smashgg.setText("Smash.gg/NoDice1");
+        smashgg.setForeground(Color.WHITE);
+        smashgg.setBounds(430, 651, 400, 100);
+        smashgg.setFont(Bebas40);
+
+        bigTourneyNum = new JLabel("#1");
+        Color mustard = new Color(255, 243,195);
+        bigTourneyNum.setForeground(Color.WHITE);
+        bigTourneyNum.setBounds(175, 390, 400, 400);
+        bigTourneyNum.setFont(Bebas200real);
+
+        bottomTourneyName.setText("No Dice #1");
+        bottomTourneyName.setForeground(Color.WHITE);
+        bottomTourneyName.setBounds(5,555, 175, 293);
+        bottomTourneyName.setFont(Bebas40);
+
+        date.setText("05/23/2021");
+        date.setForeground(Color.WHITE);
+        date.setBounds(220, 675, 236, 52);
+        date.setFont(Bebas40);
+
+        VS.setText("VS");
+        VS.setForeground(Color.white);
+        VS.setBounds(810, 323, 222, 293);
+        VS.setFont(Bebas200real);
+
+        tourneyFormat.setText("");
+        tourneyFormat.setForeground(Color.BLACK);
+        tourneyFormat.setBounds(549,180, 243, 94);
+        tourneyFormat.setFont(Bebas80);
+
+        tourneyRound.setText("Winners Round 2");
+        tourneyRound.setForeground(Color.WHITE);
+        tourneyRound.setBounds(15, 420, 500, 100);
+        tourneyRound.setFont(Bebas40);
+
+        //There is an image in place of the tourney name
+        topTourneyName.setText("");
+        topTourneyName.setForeground(Color.BLACK);
+        topTourneyName.setBounds(388, 0, 508, 146);
+        topTourneyName.setFont(Bebas125);
+
+        //There is no subtitle
+        subtitle.setText("");
+        subtitle.setForeground(Color.BLACK);
+        subtitle.setBounds(480, 115, 416, 50);
+        subtitle.setFont(LemonMilk20);
+
+        Player1.setText("Shio");
+        Player1.setForeground(Color.WHITE);
+        Player1.setBounds(440, 395, 480, 150);
+        Player1.setFont(Bebas40);
+
+        Player2.setText("Glue");
+        Player2.setForeground(Color.WHITE);
+        Player2.setBounds(825, 395, 507, 150);
+        Player2.setFont(Bebas40);
+    }
     
     private void loadControls() {
         Player1Input = new JTextField();
@@ -711,235 +886,472 @@ public class Test extends JFrame{
     }
 
     private void setChordsForImg(String name, int player) {
-        if(player == 1) {
-            if (name.contains("Samus"))
-                Player1Img1.setBounds(-110, 150, 760, 1100);
-            if (name.contains("Dark Samus"))
-                Player1Img1.setBounds(-110, 150, 850, 1100);
-            if (name.contains("Yoshi"))
-                Player1Img1.setBounds(-110, 0, 760, 850);
-            if (name.contains("Captain Falcon"))
-                Player1Img1.setBounds(-110, 150, 760, 900);
-            if (name.contains("Jigglypuff"))
-                Player1Img1.setBounds(-110, -75, 760, 850);
-            if (name.contains("Peach"))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            if (name.contains("Daisy"))
-                Player1Img1.setBounds(-110, 100, 760, 900);
-            if (name.contains("Bowser "))
-                Player1Img1.setBounds(-110, -50, 760, 850);
-            if (name.contains("Ice"))
-                Player1Img1.setBounds(-110, -100, 760, 850);
-            if (name.contains("Sheik"))
-                Player1Img1.setBounds(-110, 100, 800, 930);
-            if (name.contains("Dr. "))
-                Player1Img1.setBounds(-110, 0, 760, 850);
-            if (name.contains("Pichu"))
-                Player1Img1.setBounds(-110, -65, 760, 850);
-            if (name.contains("Falco "))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            if (name.contains("Marth"))
-                Player1Img1.setBounds(-110, 100, 820, 850);
-            if (name.contains("Lucina"))
-                Player1Img1.setBounds(-110, 100, 850, 850);
-            if (name.contains("Ganon"))
-                Player1Img1.setBounds(-175, 100, 930, 950);
-            if (name.contains("GnW"))
-                Player1Img1.setBounds(-175, -25, 930, 950);
-            if (name.contains("Meta"))
-                Player1Img1.setBounds(-150, -150, 850, 850);
-            if (name.contains("ZSS"))
-                Player1Img1.setBounds(-175, 130, 790, 1100);
-            if (name.contains("Snake"))
-                Player1Img1.setBounds(-110, 130, 760, 1000);
-            if (name.contains("Ike"))
-                Player1Img1.setBounds(-110, 130, 900, 1000);
-            if (name.contains("Ivy"))
-                Player1Img1.setBounds(-110, -150, 760, 850);
-            if (name.contains("Sonic"))
-                Player1Img1.setBounds(-110, 75, 760, 850);
-            if (name.contains("Olimar"))
-                Player1Img1.setBounds(-110, -75, 760, 850);
-            if (name.contains("Toon"))
-                Player1Img1.setBounds(-110, -25, 760, 850);
-            if (name.contains("Mega"))
-                Player1Img1.setBounds(-110, 50, 760, 850);
-            if (name.contains("Wii"))
-                Player1Img1.setBounds(-110, 150, 760, 1100);
-            if (name.contains("Rosa"))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            if (name.contains("Little Mac"))
-                Player1Img1.setBounds(-170, 100, 760, 890);
-            if (name.contains("Brawler"))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            if (name.contains("Gunner"))
-                Player1Img1.setBounds(-110, 50, 760, 850);
-            if (name.contains("Cuphead"))
-                Player1Img1.setBounds(-110, -80, 760, 850);
-            if (name.contains("Robin"))
-                Player1Img1.setBounds(-190, 100, 760, 950);
-            if (name.contains("Shulk"))
-                Player1Img1.setBounds(-190, 85, 760, 950);
-            if (name.contains("Duck Hunt"))
-                Player1Img1.setBounds(-110, -190, 760, 850);
-            if (name.contains("Ryu"))
-                Player1Img1.setBounds(-110, 150, 760, 1200);
-            if (name.contains("Ken"))
-                Player1Img1.setBounds(-90, 150, 760, 1200);
-            if (name.contains("Cloud"))
-                Player1Img1.setBounds(-200, 150, 760, 950);
-            if (name.contains("Corrin"))
-                Player1Img1.setBounds(-200, 150, 760, 1100);
-            if (name.contains("Bayonetta"))
-                Player1Img1.setBounds(-300, 150, 1100, 1050);
-            if (name.contains("Ridley"))
-                Player1Img1.setBounds(-500, -200, 1120, 1050);
-            if (name.contains("Simon"))
-                Player1Img1.setBounds(-110, 150, 800, 950);
-            if (name.contains("Richter"))
-                Player1Img1.setBounds(-110, 50, 800, 1200);
-            if (name.contains("King K. Rool"))
-                Player1Img1.setBounds(-150, 100, 800, 850);
-            if (name.contains("Isabelle"))
-                Player1Img1.setBounds(-110, -75, 760, 850);
-            if (name.contains("Incineroar"))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            if (name.contains("Plant"))
-                Player1Img1.setBounds(-190, 0, 760, 850);
-            if (name.contains("Joker"))
-                Player1Img1.setBounds(-190, 100, 760, 1000);
-            if (name.contains("Banjo"))
-                Player1Img1.setBounds(-190, -75, 760, 850);
-            if (name.contains("Terry"))
-                Player1Img1.setBounds(-110, 150, 760, 950);
-            if (name.contains("Byleth"))
-                Player1Img1.setBounds(-110, 150, 760, 950);
-            if (name.contains("Steve"))
-                Player1Img1.setBounds(-200, 150, 760, 850);
-            if (name.contains("Sephiroth"))
-                Player1Img1.setBounds(-110, 200, 760, 1100);
-            if (name.contains("Pyra Mythra"))
-                Player1Img1.setBounds(-300, 150, 1200, 850);
-            if (name.contains("Kazuya"))
-                Player1Img1.setBounds(-150, 150, 760, 1050);
-            if (name.contains("Sora"))
-                Player1Img1.setBounds(-110, 100, 760, 850);
-            // Default cords are Player1Img1.setBounds(-110, 0, 760, 850);
+        if(pickTourney.getSelectedItem().toString() != "No Dice") {
+            if (player == 1) {
+                if (name.contains("Samus"))
+                    Player1Img1.setBounds(-110, 150, 760, 1100);
+                if (name.contains("Dark Samus"))
+                    Player1Img1.setBounds(-110, 150, 850, 1100);
+                if (name.contains("Yoshi"))
+                    Player1Img1.setBounds(-110, 0, 760, 850);
+                if (name.contains("Captain Falcon"))
+                    Player1Img1.setBounds(-110, 150, 760, 900);
+                if (name.contains("Jigglypuff"))
+                    Player1Img1.setBounds(-110, -75, 760, 850);
+                if (name.contains("Peach"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                if (name.contains("Daisy"))
+                    Player1Img1.setBounds(-110, 100, 760, 900);
+                if (name.contains("Bowser "))
+                    Player1Img1.setBounds(-110, -50, 760, 850);
+                if (name.contains("Ice"))
+                    Player1Img1.setBounds(-110, -100, 760, 850);
+                if (name.contains("Sheik"))
+                    Player1Img1.setBounds(-110, 100, 800, 930);
+                if (name.contains("Dr. "))
+                    Player1Img1.setBounds(-110, 0, 760, 850);
+                if (name.contains("Pichu"))
+                    Player1Img1.setBounds(-110, -65, 760, 850);
+                if (name.contains("Falco "))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                if (name.contains("Marth"))
+                    Player1Img1.setBounds(-110, 100, 820, 850);
+                if (name.contains("Lucina"))
+                    Player1Img1.setBounds(-110, 100, 850, 850);
+                if (name.contains("Ganon"))
+                    Player1Img1.setBounds(-175, 100, 930, 950);
+                if (name.contains("GnW"))
+                    Player1Img1.setBounds(-175, -25, 930, 950);
+                if (name.contains("Meta"))
+                    Player1Img1.setBounds(-150, -150, 850, 850);
+                if (name.contains("ZSS"))
+                    Player1Img1.setBounds(-175, 130, 790, 1100);
+                if (name.contains("Snake"))
+                    Player1Img1.setBounds(-110, 130, 760, 1000);
+                if (name.contains("Ike"))
+                    Player1Img1.setBounds(-110, 130, 900, 1000);
+                if (name.contains("Ivy"))
+                    Player1Img1.setBounds(-110, -150, 760, 850);
+                if (name.contains("Sonic"))
+                    Player1Img1.setBounds(-110, 75, 760, 850);
+                if (name.contains("Olimar"))
+                    Player1Img1.setBounds(-110, -75, 760, 850);
+                if (name.contains("Toon"))
+                    Player1Img1.setBounds(-110, -25, 760, 850);
+                if (name.contains("Mega"))
+                    Player1Img1.setBounds(-110, 50, 760, 850);
+                if (name.contains("Wii"))
+                    Player1Img1.setBounds(-110, 150, 760, 1100);
+                if (name.contains("Rosa"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                if (name.contains("Little Mac"))
+                    Player1Img1.setBounds(-170, 100, 760, 890);
+                if (name.contains("Brawler"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                if (name.contains("Gunner"))
+                    Player1Img1.setBounds(-110, 50, 760, 850);
+                if (name.contains("Cuphead"))
+                    Player1Img1.setBounds(-110, -80, 760, 850);
+                if (name.contains("Robin"))
+                    Player1Img1.setBounds(-190, 100, 760, 950);
+                if (name.contains("Shulk"))
+                    Player1Img1.setBounds(-190, 85, 760, 950);
+                if (name.contains("Duck Hunt"))
+                    Player1Img1.setBounds(-110, -190, 760, 850);
+                if (name.contains("Ryu"))
+                    Player1Img1.setBounds(-110, 150, 760, 1200);
+                if (name.contains("Ken"))
+                    Player1Img1.setBounds(-90, 150, 760, 1200);
+                if (name.contains("Cloud"))
+                    Player1Img1.setBounds(-200, 150, 760, 950);
+                if (name.contains("Corrin"))
+                    Player1Img1.setBounds(-200, 150, 760, 1100);
+                if (name.contains("Bayonetta"))
+                    Player1Img1.setBounds(-300, 150, 1100, 1050);
+                if (name.contains("Ridley"))
+                    Player1Img1.setBounds(-500, -200, 1120, 1050);
+                if (name.contains("Simon"))
+                    Player1Img1.setBounds(-110, 150, 800, 950);
+                if (name.contains("Richter"))
+                    Player1Img1.setBounds(-110, 50, 800, 1200);
+                if (name.contains("King K. Rool"))
+                    Player1Img1.setBounds(-150, 100, 800, 850);
+                if (name.contains("Isabelle"))
+                    Player1Img1.setBounds(-110, -75, 760, 850);
+                if (name.contains("Incineroar"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                if (name.contains("Plant"))
+                    Player1Img1.setBounds(-190, 0, 760, 850);
+                if (name.contains("Joker"))
+                    Player1Img1.setBounds(-190, 100, 760, 1000);
+                if (name.contains("Banjo"))
+                    Player1Img1.setBounds(-190, -75, 760, 850);
+                if (name.contains("Terry"))
+                    Player1Img1.setBounds(-110, 150, 760, 950);
+                if (name.contains("Byleth"))
+                    Player1Img1.setBounds(-110, 150, 760, 950);
+                if (name.contains("Steve"))
+                    Player1Img1.setBounds(-200, 150, 760, 850);
+                if (name.contains("Sephiroth"))
+                    Player1Img1.setBounds(-110, 200, 760, 1100);
+                if (name.contains("Pyra Mythra"))
+                    Player1Img1.setBounds(-300, 150, 1200, 850);
+                if (name.contains("Kazuya"))
+                    Player1Img1.setBounds(-150, 150, 760, 1050);
+                if (name.contains("Sora"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
+                // Default cords are Player1Img1.setBounds(-110, 0, 760, 850);
+            }
+            if (player == 2) {
+                if (name.contains("Samus"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Dark Samus"))
+                    Player2Img1.setBounds(666, 150, 850, 1100);
+                if (name.contains("Yoshi"))
+                    Player2Img1.setBounds(666, 0, 760, 850);
+                if (name.contains("Captain Falcon"))
+                    Player2Img1.setBounds(666, 150, 760, 900);
+                if (name.contains("Jigglypuff"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Peach"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Daisy"))
+                    Player2Img1.setBounds(666, 100, 760, 900);
+                if (name.contains("Bowser "))
+                    Player2Img1.setBounds(666, -50, 760, 850);
+                if (name.contains("Ice"))
+                    Player2Img1.setBounds(666, -100, 760, 850);
+                if (name.contains("Sheik"))
+                    Player2Img1.setBounds(666, 100, 800, 930);
+                if (name.contains("Dr. "))
+                    Player2Img1.setBounds(666, 0, 760, 850);
+                if (name.contains("Pichu"))
+                    Player2Img1.setBounds(666, -65, 760, 850);
+                if (name.contains("Falco "))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Marth"))
+                    Player2Img1.setBounds(666, 100, 820, 850);
+                if (name.contains("Lucina"))
+                    Player2Img1.setBounds(666, 100, 850, 850);
+                if (name.contains("Ganon"))
+                    Player2Img1.setBounds(491, 100, 930, 950);
+                if (name.contains("GnW"))
+                    Player2Img1.setBounds(591, -25, 930, 950);
+                if (name.contains("Meta"))
+                    Player2Img1.setBounds(516, -150, 850, 850);
+                if (name.contains("ZSS"))
+                    Player2Img1.setBounds(641, 130, 790, 1100);
+                if (name.contains("Snake"))
+                    Player2Img1.setBounds(666, 130, 760, 1000);
+                if (name.contains("Ike"))
+                    Player2Img1.setBounds(566, 130, 900, 1000);
+                if (name.contains("Ivy"))
+                    Player2Img1.setBounds(666, -150, 760, 850);
+                if (name.contains("Sonic"))
+                    Player2Img1.setBounds(666, 75, 760, 850);
+                if (name.contains("Olimar"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Toon"))
+                    Player2Img1.setBounds(666, -25, 760, 850);
+                if (name.contains("Mega"))
+                    Player2Img1.setBounds(666, 50, 760, 850);
+                if (name.contains("Wii"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Rosa"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Little Mac"))
+                    Player2Img1.setBounds(666, 100, 760, 890);
+                if (name.contains("Brawler"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Gunner"))
+                    Player2Img1.setBounds(666, 50, 760, 850);
+                if (name.contains("Cuphead"))
+                    Player2Img1.setBounds(666, -80, 760, 850);
+                if (name.contains("Robin"))
+                    Player2Img1.setBounds(666, 100, 760, 950);
+                if (name.contains("Shulk"))
+                    Player2Img1.setBounds(666, 85, 760, 950);
+                if (name.contains("Duck Hunt"))
+                    Player2Img1.setBounds(666, -190, 760, 850);
+                if (name.contains("Ryu"))
+                    Player2Img1.setBounds(666, 150, 760, 1200);
+                if (name.contains("Ken"))
+                    Player2Img1.setBounds(606, 150, 760, 1200);
+                if (name.contains("Cloud"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Corrin"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Bayonetta"))
+                    Player2Img1.setBounds(366, 150, 1100, 1050);
+                if (name.contains("Ridley"))
+                    Player2Img1.setBounds(626, -150, 1120, 1050);
+                if (name.contains("Simon"))
+                    Player2Img1.setBounds(666, 150, 800, 950);
+                if (name.contains("Richter"))
+                    Player2Img1.setBounds(666, 50, 800, 1200);
+                if (name.contains("King K. Rool"))
+                    Player2Img1.setBounds(626, 100, 800, 850);
+                if (name.contains("Isabelle"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Incineroar"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Plant"))
+                    Player2Img1.setBounds(706, 0, 760, 1000);
+                if (name.contains("Joker"))
+                    Player2Img1.setBounds(706, 100, 760, 850);
+                if (name.contains("Banjo"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Terry"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Byleth"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Steve"))
+                    Player2Img1.setBounds(666, 150, 760, 850);
+                if (name.contains("Sephiroth"))
+                    Player2Img1.setBounds(666, 200, 760, 1100);
+                if (name.contains("Pyra Mythra"))
+                    Player2Img1.setBounds(366, 150, 1200, 850);
+                if (name.contains("Pyra Solo"))
+                    Player2Img1.setBounds(400, 120, 1200, 850);
+                if (name.contains("Mythra Solo"))
+                    Player2Img1.setBounds(400, 120, 1200, 850);
+                if (name.contains("Kazuya"))
+                    Player2Img1.setBounds(626, 150, 760, 1050);
+                if (name.contains("Sora"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                //Default cords are Player2Img1.setBounds(666, 0, 760, 850);
+            }
         }
-        if(player == 2) {
-            if (name.contains("Samus"))
-                Player2Img1.setBounds(666, 150, 760, 1100);
-            if (name.contains("Dark Samus"))
-                Player2Img1.setBounds(666, 150, 850, 1100);
-            if (name.contains("Yoshi"))
-                Player2Img1.setBounds(666, 0, 760, 850);
-            if (name.contains("Captain Falcon"))
-                Player2Img1.setBounds(666, 150, 760, 900);
-            if (name.contains("Jigglypuff"))
-                Player2Img1.setBounds(666, -75, 760, 850);
-            if (name.contains("Peach"))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            if (name.contains("Daisy"))
-                Player2Img1.setBounds(666, 100, 760, 900);
-            if (name.contains("Bowser "))
-                Player2Img1.setBounds(666, -50, 760, 850);
-            if (name.contains("Ice"))
-                Player2Img1.setBounds(666, -100, 760, 850);
-            if (name.contains("Sheik"))
-                Player2Img1.setBounds(666, 100, 800, 930);
-            if (name.contains("Dr. "))
-                Player2Img1.setBounds(666, 0, 760, 850);
-            if (name.contains("Pichu"))
-                Player2Img1.setBounds(666, -65, 760, 850);
-            if (name.contains("Falco "))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            if (name.contains("Marth"))
-                Player2Img1.setBounds(666, 100, 820, 850);
-            if (name.contains("Lucina"))
-                Player2Img1.setBounds(666, 100, 850, 850);
-            if (name.contains("Ganon"))
-                Player2Img1.setBounds(491, 100, 930, 950);
-            if (name.contains("GnW"))
-                Player2Img1.setBounds(591, -25, 930, 950);
-            if (name.contains("Meta"))
-                Player2Img1.setBounds(516, -150, 850, 850);
-            if (name.contains("ZSS"))
-                Player2Img1.setBounds(641, 130, 790, 1100);
-            if (name.contains("Snake"))
-                Player2Img1.setBounds(666, 130, 760, 1000);
-            if (name.contains("Ike"))
-                Player2Img1.setBounds(566, 130, 900, 1000);
-            if (name.contains("Ivy"))
-                Player2Img1.setBounds(666, -150, 760, 850);
-            if (name.contains("Sonic"))
-                Player2Img1.setBounds(666, 75, 760, 850);
-            if (name.contains("Olimar"))
-                Player2Img1.setBounds(666, -75, 760, 850);
-            if (name.contains("Toon"))
-                Player2Img1.setBounds(666, -25, 760, 850);
-            if (name.contains("Mega"))
-                Player2Img1.setBounds(666, 50, 760, 850);
-            if (name.contains("Wii"))
-                Player2Img1.setBounds(666, 150, 760, 1100);
-            if (name.contains("Rosa"))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            if (name.contains("Little Mac"))
-                Player2Img1.setBounds(666, 100, 760, 890);
-            if (name.contains("Brawler"))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            if (name.contains("Gunner"))
-                Player2Img1.setBounds(666, 50, 760, 850);
-            if (name.contains("Cuphead"))
-                Player2Img1.setBounds(666, -80, 760, 850);
-            if (name.contains("Robin"))
-                Player2Img1.setBounds(666, 100, 760, 950);
-            if (name.contains("Shulk"))
-                Player2Img1.setBounds(666, 85, 760, 950);
-            if (name.contains("Duck Hunt"))
-                Player2Img1.setBounds(666, -190, 760, 850);
-            if (name.contains("Ryu"))
-                Player2Img1.setBounds(666, 150, 760, 1200);
-            if (name.contains("Ken"))
-                Player2Img1.setBounds(606, 150, 760, 1200);
-            if (name.contains("Cloud"))
-                Player2Img1.setBounds(666, 150, 760, 950);
-            if (name.contains("Corrin"))
-                Player2Img1.setBounds(666, 150, 760, 1100);
-            if (name.contains("Bayonetta"))
-                Player2Img1.setBounds(366, 150, 1100, 1050);
-            if (name.contains("Ridley"))
-                Player2Img1.setBounds(626, -150, 1120, 1050);
-            if (name.contains("Simon"))
-                Player2Img1.setBounds(666, 150, 800, 950);
-            if (name.contains("Richter"))
-                Player2Img1.setBounds(666, 50, 800, 1200);
-            if (name.contains("King K. Rool"))
-                Player2Img1.setBounds(626, 100, 800, 850);
-            if (name.contains("Isabelle"))
-                Player2Img1.setBounds(666, -75, 760, 850);
-            if (name.contains("Incineroar"))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            if (name.contains("Plant"))
-                Player2Img1.setBounds(706, 0, 760, 1000);
-            if (name.contains("Joker"))
-                Player2Img1.setBounds(706, 100, 760, 850);
-            if (name.contains("Banjo"))
-                Player2Img1.setBounds(666, -75, 760, 850);
-            if (name.contains("Terry"))
-                Player2Img1.setBounds(666, 150, 760, 950);
-            if (name.contains("Byleth"))
-                Player2Img1.setBounds(666, 150, 760, 950);
-            if (name.contains("Steve"))
-                Player2Img1.setBounds(666, 150, 760, 850);
-            if (name.contains("Sephiroth"))
-                Player2Img1.setBounds(666, 200, 760, 1100);
-            if (name.contains("Pyra Mythra"))
-                Player2Img1.setBounds(366, 150, 1200, 850);
-            if (name.contains("Kazuya"))
-                Player2Img1.setBounds(626, 150, 760, 1050);
-            if (name.contains("Sora"))
-                Player2Img1.setBounds(666, 100, 760, 850);
-            //Default cords are Player2Img1.setBounds(666, 0, 760, 850);
+        else if (pickTourney.getSelectedItem().toString() == "No Dice") {
+            if (player == 1) {
+                if (name.contains("Samus"))
+                    Player1Img1.setBounds(300, 150, 760, 1100);
+                if (name.contains("Dark Samus"))
+                    Player1Img1.setBounds(300, 150, 850, 1100);
+                if (name.contains("Yoshi"))
+                    Player1Img1.setBounds(300, 0, 760, 850);
+                if (name.contains("Captain Falcon"))
+                    Player1Img1.setBounds(300, 150, 760, 900);
+                if (name.contains("Jigglypuff"))
+                    Player1Img1.setBounds(300, -75, 760, 850);
+                if (name.contains("Peach"))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+                if (name.contains("Daisy"))
+                    Player1Img1.setBounds(300, 100, 760, 900);
+                if (name.contains("Bowser "))
+                    Player1Img1.setBounds(300, -50, 760, 850);
+                if (name.contains("Ice"))
+                    Player1Img1.setBounds(300, -100, 760, 850);
+                if (name.contains("Sheik"))
+                    Player1Img1.setBounds(300, 100, 800, 930);
+                if (name.contains("Dr. "))
+                    Player1Img1.setBounds(300, 0, 760, 850);
+                if (name.contains("Pichu"))
+                    Player1Img1.setBounds(300, -65, 760, 850);
+                if (name.contains("Falco "))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+                if (name.contains("Marth"))
+                    Player1Img1.setBounds(300, 100, 820, 850);
+                if (name.contains("Lucina"))
+                    Player1Img1.setBounds(300, 100, 850, 850);
+                if (name.contains("Ganon"))
+                    Player1Img1.setBounds(235, 100, 930, 950);
+                if (name.contains("GnW"))
+                    Player1Img1.setBounds(235, -25, 930, 950);
+                if (name.contains("Meta"))
+                    Player1Img1.setBounds(255, -150, 850, 850);
+                if (name.contains("ZSS"))
+                    Player1Img1.setBounds(235, 130, 790, 1100);
+                if (name.contains("Snake"))
+                    Player1Img1.setBounds(300, 130, 760, 1000);
+                if (name.contains("Ike"))
+                    Player1Img1.setBounds(300, 130, 900, 1000);
+                if (name.contains("Ivy"))
+                    Player1Img1.setBounds(300, -150, 760, 850);
+                if (name.contains("Sonic"))
+                    Player1Img1.setBounds(300, 75, 760, 850);
+                if (name.contains("Olimar"))
+                    Player1Img1.setBounds(300, -75, 760, 850);
+                if (name.contains("Toon"))
+                    Player1Img1.setBounds(300, -25, 760, 850);
+                if (name.contains("Mega"))
+                    Player1Img1.setBounds(300, 50, 760, 850);
+                if (name.contains("Wii"))
+                    Player1Img1.setBounds(300, 150, 760, 1100);
+                if (name.contains("Rosa"))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+                if (name.contains("Little Mac"))
+                    Player1Img1.setBounds(240, 100, 760, 890);
+                if (name.contains("Brawler"))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+                if (name.contains("Gunner"))
+                    Player1Img1.setBounds(300, 50, 760, 850);
+                if (name.contains("Cuphead"))
+                    Player1Img1.setBounds(300, -80, 760, 850);
+                if (name.contains("Robin"))
+                    Player1Img1.setBounds(220, 100, 760, 950);
+                if (name.contains("Shulk"))
+                    Player1Img1.setBounds(220, 85, 760, 950);
+                if (name.contains("Duck Hunt"))
+                    Player1Img1.setBounds(300, -190, 760, 850);
+                if (name.contains("Ryu"))
+                    Player1Img1.setBounds(300, 150, 760, 1200);
+                if (name.contains("Ken"))
+                    Player1Img1.setBounds(320, 150, 760, 1200);
+                if (name.contains("Cloud"))
+                    Player1Img1.setBounds(210, 150, 760, 950);
+                if (name.contains("Corrin"))
+                    Player1Img1.setBounds(210, 150, 760, 1100);
+                if (name.contains("Bayonetta"))
+                    Player1Img1.setBounds(10, 150, 1100, 1050);
+                if (name.contains("Ridley"))
+                    Player1Img1.setBounds(0, -200, 1120, 1050);
+                if (name.contains("Simon"))
+                    Player1Img1.setBounds(300, 150, 800, 950);
+                if (name.contains("Richter"))
+                    Player1Img1.setBounds(300, 50, 800, 1200);
+                if (name.contains("King K. Rool"))
+                    Player1Img1.setBounds(260, 100, 800, 850);
+                if (name.contains("Isabelle"))
+                    Player1Img1.setBounds(300, -75, 760, 850);
+                if (name.contains("Incineroar"))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+                if (name.contains("Plant"))
+                    Player1Img1.setBounds(220, 0, 760, 850);
+                if (name.contains("Joker"))
+                    Player1Img1.setBounds(220, 100, 760, 1000);
+                if (name.contains("Banjo"))
+                    Player1Img1.setBounds(220, -75, 760, 850);
+                if (name.contains("Terry"))
+                    Player1Img1.setBounds(300, 150, 760, 950);
+                if (name.contains("Byleth"))
+                    Player1Img1.setBounds(300, 150, 760, 950);
+                if (name.contains("Steve"))
+                    Player1Img1.setBounds(210, 150, 760, 850);
+                if (name.contains("Sephiroth"))
+                    Player1Img1.setBounds(300, 200, 760, 1100);
+                if (name.contains("Pyra Mythra"))
+                    Player1Img1.setBounds(10, 150, 1200, 850);
+                if (name.contains("Kazuya"))
+                    Player1Img1.setBounds(260, 150, 760, 1050);
+                if (name.contains("Sora"))
+                    Player1Img1.setBounds(300, 100, 760, 850);
+            }
+            if (player == 2) {
+                if (name.contains("Samus"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Dark Samus"))
+                    Player2Img1.setBounds(666, 150, 850, 1100);
+                if (name.contains("Yoshi"))
+                    Player2Img1.setBounds(666, 0, 760, 850);
+                if (name.contains("Captain Falcon"))
+                    Player2Img1.setBounds(666, 150, 760, 900);
+                if (name.contains("Jigglypuff"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Peach"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Daisy"))
+                    Player2Img1.setBounds(666, 100, 760, 900);
+                if (name.contains("Bowser "))
+                    Player2Img1.setBounds(666, -50, 760, 850);
+                if (name.contains("Ice"))
+                    Player2Img1.setBounds(666, -100, 760, 850);
+                if (name.contains("Sheik"))
+                    Player2Img1.setBounds(666, 100, 800, 930);
+                if (name.contains("Dr. "))
+                    Player2Img1.setBounds(666, 0, 760, 850);
+                if (name.contains("Pichu"))
+                    Player2Img1.setBounds(666, -65, 760, 850);
+                if (name.contains("Falco "))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Marth"))
+                    Player2Img1.setBounds(666, 100, 820, 850);
+                if (name.contains("Lucina"))
+                    Player2Img1.setBounds(666, 100, 850, 850);
+                if (name.contains("Ganon"))
+                    Player2Img1.setBounds(491, 100, 930, 950);
+                if (name.contains("GnW"))
+                    Player2Img1.setBounds(591, -25, 930, 950);
+                if (name.contains("Meta"))
+                    Player2Img1.setBounds(516, -150, 850, 850);
+                if (name.contains("ZSS"))
+                    Player2Img1.setBounds(641, 130, 790, 1100);
+                if (name.contains("Snake"))
+                    Player2Img1.setBounds(666, 130, 760, 1000);
+                if (name.contains("Ike"))
+                    Player2Img1.setBounds(566, 130, 900, 1000);
+                if (name.contains("Ivy"))
+                    Player2Img1.setBounds(666, -150, 760, 850);
+                if (name.contains("Sonic"))
+                    Player2Img1.setBounds(666, 75, 760, 850);
+                if (name.contains("Olimar"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Toon"))
+                    Player2Img1.setBounds(666, -25, 760, 850);
+                if (name.contains("Mega"))
+                    Player2Img1.setBounds(666, 50, 760, 850);
+                if (name.contains("Wii"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Rosa"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Little Mac"))
+                    Player2Img1.setBounds(666, 100, 760, 890);
+                if (name.contains("Brawler"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Gunner"))
+                    Player2Img1.setBounds(666, 50, 760, 850);
+                if (name.contains("Cuphead"))
+                    Player2Img1.setBounds(666, -80, 760, 850);
+                if (name.contains("Robin"))
+                    Player2Img1.setBounds(666, 100, 760, 950);
+                if (name.contains("Shulk"))
+                    Player2Img1.setBounds(666, 85, 760, 950);
+                if (name.contains("Duck Hunt"))
+                    Player2Img1.setBounds(666, -190, 760, 850);
+                if (name.contains("Ryu"))
+                    Player2Img1.setBounds(666, 150, 760, 1200);
+                if (name.contains("Ken"))
+                    Player2Img1.setBounds(606, 150, 760, 1200);
+                if (name.contains("Cloud"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Corrin"))
+                    Player2Img1.setBounds(666, 150, 760, 1100);
+                if (name.contains("Bayonetta"))
+                    Player2Img1.setBounds(366, 150, 1100, 1050);
+                if (name.contains("Ridley"))
+                    Player2Img1.setBounds(626, -150, 1120, 1050);
+                if (name.contains("Simon"))
+                    Player2Img1.setBounds(666, 150, 800, 950);
+                if (name.contains("Richter"))
+                    Player2Img1.setBounds(666, 50, 800, 1200);
+                if (name.contains("King K. Rool"))
+                    Player2Img1.setBounds(626, 100, 800, 850);
+                if (name.contains("Isabelle"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Incineroar"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Plant"))
+                    Player2Img1.setBounds(706, 0, 760, 1000);
+                if (name.contains("Joker"))
+                    Player2Img1.setBounds(706, 100, 760, 850);
+                if (name.contains("Banjo"))
+                    Player2Img1.setBounds(666, -75, 760, 850);
+                if (name.contains("Terry"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Byleth"))
+                    Player2Img1.setBounds(666, 150, 760, 950);
+                if (name.contains("Steve"))
+                    Player2Img1.setBounds(666, 150, 760, 850);
+                if (name.contains("Sephiroth"))
+                    Player2Img1.setBounds(666, 200, 760, 1100);
+                if (name.contains("Pyra Mythra"))
+                    Player2Img1.setBounds(366, 150, 1200, 850);
+                if (name.contains("Kazuya"))
+                    Player2Img1.setBounds(626, 150, 760, 1050);
+                if (name.contains("Sora"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                //Default cords are Player2Img1.setBounds(666, 0, 760, 850);
+            }
         }
     }
 
@@ -1861,11 +2273,11 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/pyra - platinum and gold.png"));
                 if(name == "Pyra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/pyra - pyra solo.png"));
-                    image = scale1(image, 1.5);
+                    image = scale1(image, 2);
                 }
                 if(name == "Mythra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Pyra - mythra solo.png"));
-                    image = scale1(image, 1.5);
+                    image = scale1(image, 2);
                 }
                 if(name == "Richter 1")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Richter - Default.png"));
@@ -3199,11 +3611,11 @@ public class Test extends JFrame{
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/pyra - platinum and gold.png"));
                 if(name == "Pyra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/pyra - pyra solo.png"));
-                    image = scale1(image, 1.5);
+                    image = scale1(image, 2);
                 }
                 if(name == "Mythra Solo") {
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Pyra - mythra solo.png"));
-                    image = scale1(image, 1.5);
+                    image = scale1(image, 2);
                 }
                 if(name == "Richter 1")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Richter - Default.png"));
