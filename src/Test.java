@@ -14,7 +14,7 @@ public class Test extends JFrame{
     private JLabel background, controlBackground;
     private JLabel bar;
     private JLabel Player1, Player2, bottomTourneyName, smashLogo, date, VS, tourneyFormat, tourneyRound, topTourneyName, subtitle, topTourneyImg;
-    private JLabel Player1Back, Player2Back, roundBackground, NPTLogo, smashgg, bigTourneyNum;
+    private JLabel Player1Back, Player2Back, roundBackground, NPTLogo, smashgg, vsImg;
     private JLabel Player1Img1, Player1Img2, Player2Img1, Player2Img2;
     private JLabel Player1Label, Player2Label, dateLabel, formatLabel, roundLabel, numberLabel, Player1Char1Label, Player2Char1Label, pickLabel;
     private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
@@ -85,7 +85,6 @@ public class Test extends JFrame{
             if(pickTourney.getSelectedItem().toString() == "No Dice") {
                 bottomTourneyName.setText("NO DICE #" + numberInput.getText());
                 smashgg.setText("Smash.gg/nodice" + numberInput.getText());
-                bigTourneyNum.setText("#" + numberInput.getText());
             }
             date.setText(dateInput.getText());
             Player1Img1.setIcon(new ImageIcon(chooseCharToLoad(Player1Char1.getSelectedItem().toString(), 1)));
@@ -103,7 +102,7 @@ public class Test extends JFrame{
                         roundBackground.setVisible(false);
                         smashgg.setVisible(false);
                         topTourneyImg.setEnabled(false);
-                        bigTourneyNum.setVisible(false);
+                        vsImg.setVisible(false);
                         anti_loadAssets();
                         background.add(topTourneyName);
                         background.add(subtitle);
@@ -130,7 +129,7 @@ public class Test extends JFrame{
                         roundBackground.setVisible(false);
                         smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
-                        bigTourneyNum.setVisible(false);
+                        vsImg.setVisible(false);
                         run_loadAssets();
                         background.add(topTourneyName);
                         background.add(subtitle);
@@ -158,7 +157,7 @@ public class Test extends JFrame{
                         roundBackground.setVisible(false);
                         smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
-                        bigTourneyNum.setVisible(false);
+                        vsImg.setVisible(false);
                         rechar_loadAssets();
                         background.add(topTourneyImg);
                         background.add(bottomTourneyName);
@@ -183,7 +182,7 @@ public class Test extends JFrame{
                         roundBackground.setVisible(false);
                         smashgg.setVisible(false);
                         topTourneyImg.setEnabled(true);
-                        bigTourneyNum.setVisible(false);
+                        vsImg.setVisible(false);
                         goyf_loadAssets();
                         background.add(bottomTourneyName);
                         background.add(topTourneyImg);
@@ -207,12 +206,12 @@ public class Test extends JFrame{
                         NPTLogo.setVisible(true);
                         roundBackground.setVisible(true);
                         smashgg.setVisible(true);
-                        bigTourneyNum.setVisible(true);
+                        vsImg.setVisible(true);
                         dice_loadAssets();
                         background.add(bottomTourneyName);
                         background.add(topTourneyName);
                         background.add(tourneyRound);
-                        background.add(VS);
+                        background.add(vsImg);
                         background.add(Player1);
                         background.add(Player2);
                         background.add(Player1Back);
@@ -225,7 +224,6 @@ public class Test extends JFrame{
                         background.add(Player1Img1);
                         background.add(Player2Img1);
                         background.add(smashLogo);
-                        background.add(bigTourneyNum);
                         background.add(topTourneyImg);
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -266,6 +264,7 @@ public class Test extends JFrame{
         BufferedImage title = ImageIO.read(new File("Run It Back/Title.png"));
         BufferedImage forRound = ImageIO.read(new File("No Dice/For Round.png"));
         BufferedImage nptLogo = ImageIO.read(new File("No Dice/NPT Logo White.png"));
+        BufferedImage vsFile = ImageIO.read(new File("No Dice/VS.png"));
         BufferedImage blackBar = ImageIO.read(new File("Antibodied/Rectangle.png"));
         BufferedImage logo = ImageIO.read(new File("Antibodied/Smash Ultimate Logo.png"));
         BufferedImage Player1Img = ImageIO.read(new File("Antibodied/Rectangle 3.png"));
@@ -304,16 +303,14 @@ public class Test extends JFrame{
         NPTLogo = new JLabel(new ImageIcon(nptLogo));
         NPTLogo.setBounds(540, 715, 49, 42);
 
+        vsImg = new JLabel(new ImageIcon(vsFile));
+        vsImg.setBounds(810, 323, 222, 293);
+
 
 
         //Loads in the text
         smashgg = new JLabel("Smash.gg/NoDice1");
         smashgg.setBounds(500, 600, 200, 100);
-
-        bigTourneyNum = new JLabel("#1");
-        bigTourneyNum.setForeground(Color.getHSBColor(48,24,100));
-        bigTourneyNum.setBounds(115, 420, 400, 400);
-        bigTourneyNum.setFont(Bebas200);
 
         bottomTourneyName = new JLabel("ANTIBODIED #3", SwingConstants.CENTER);
         bottomTourneyName.setForeground(Color.WHITE);
@@ -353,12 +350,12 @@ public class Test extends JFrame{
         Player1 = new JLabel("YODA CAGE [W]", SwingConstants.CENTER);
         Player1.setForeground(Color.BLACK);
         Player1.setBounds(10, 440, 480, 100);
-        Player1.setFont(Bebas100);
+        Player1.setFont(Bebas80);
 
         Player2 = new JLabel("BEAST [L]", SwingConstants.CENTER);
         Player2.setForeground(Color.BLACK);
-        Player2.setBounds(800, 440, 507, 100);
-        Player2.setFont(Bebas100);
+        Player2.setBounds(785, 440, 507, 100);
+        Player2.setFont(Bebas80);
     }
 
     private void anti_loadAssets() throws IOException {
@@ -441,12 +438,12 @@ public class Test extends JFrame{
         Player1.setText("YODA CAGE [W]");
         Player1.setForeground(Color.BLACK);
         Player1.setBounds(10, 440, 480, 100);
-        Player1.setFont(Bebas100);
+        Player1.setFont(Bebas80);
 
         Player2.setText("BEAST [L]");
         Player2.setForeground(Color.BLACK);
-        Player2.setBounds(800, 440, 507, 100);
-        Player2.setFont(Bebas100);
+        Player2.setBounds(785, 440, 507, 100);
+        Player2.setFont(Bebas80);
     }
 
     private void run_loadAssets() throws IOException {
@@ -528,12 +525,12 @@ public class Test extends JFrame{
         Player1.setText("Syrup [W]");
         Player1.setForeground(Color.BLACK);
         Player1.setBounds(10, 440, 480, 100);
-        Player1.setFont(Bebas100);
+        Player1.setFont(Bebas80);
 
         Player2.setText("ConCon [L]");
         Player2.setForeground(Color.BLACK);
-        Player2.setBounds(800, 440, 507, 100);
-        Player2.setFont(Bebas100);
+        Player2.setBounds(785, 440, 507, 100);
+        Player2.setFont(Bebas80);
     }
 
     private void rechar_loadAssets() throws IOException {
@@ -608,13 +605,13 @@ public class Test extends JFrame{
 
         Player1.setText("Syrup [W]");
         Player1.setForeground(Color.WHITE);
-        Player1.setBounds(10, 425, 480, 150);
-        Player1.setFont(Agency100);
+        Player1.setBounds(10, 430, 480, 150);
+        Player1.setFont(Bebas80);
 
         Player2.setText("ConCon [L]");
         Player2.setForeground(Color.WHITE);
-        Player2.setBounds(800, 425, 507, 150);
-        Player2.setFont(Agency100);
+        Player2.setBounds(785, 430, 507, 150);
+        Player2.setFont(Bebas80);
     }
 
     private void goyf_loadAssets() throws IOException {
@@ -656,10 +653,10 @@ public class Test extends JFrame{
         bottomTourneyName.setBounds(905,-10, 150, 293);
         bottomTourneyName.setFont(UraeNium200);
 
-        date.setText("05-23-2021");
+        date.setText("05/23/2021");
         date.setForeground(Color.WHITE);
-        date.setBounds(20, 675, 236, 52);
-        date.setFont(UraeNium50);
+        date.setBounds(540, 575, 300, 52);
+        date.setFont(Agency50);
 
         VS.setText("VS");
         VS.setForeground(Color.BLACK);
@@ -690,13 +687,13 @@ public class Test extends JFrame{
 
         Player1.setText("Lights");
         Player1.setForeground(Color.BLACK);
-        Player1.setBounds(10, 435, 480, 150);
-        Player1.setFont(Market100);
+        Player1.setBounds(30, 435, 480, 150);
+        Player1.setFont(Bebas80);
 
         Player2.setText("Ace$");
         Player2.setForeground(Color.BLACK);
         Player2.setBounds(725, 435, 507, 150);
-        Player2.setFont(Market100);
+        Player2.setFont(Bebas80);
     }
 
     private void dice_loadAssets() throws IOException {
@@ -708,9 +705,12 @@ public class Test extends JFrame{
         BufferedImage nptLogo = ImageIO.read(new File("No Dice/NPT Logo White.png"));
         BufferedImage Player1Img = ImageIO.read(new File("No Dice/Rectangle 3.png"));
         BufferedImage Player2Img = ImageIO.read(new File("No Dice/Rectangle 3 copy.png"));
+        BufferedImage vsFile = ImageIO.read(new File("No Dice/VS.png"));
         BufferedImage bottom = ImageIO.read(new File("No Dice/bottom.png"));
         BufferedImage Yoda1 = ImageIO.read(new File("SSBU Character Renders/For Player 1/Bowser Jr - Morton.png"));
         BufferedImage Beast1 = ImageIO.read(new File("SSBU Character Renders/For Player 2/PT - Charizard Default.png"));
+
+        background.remove(VS);
 
         Yoda1 = scale1(Yoda1, 0.5);
         Beast1 = scale1(Beast1, 0.8);
@@ -738,11 +738,14 @@ public class Test extends JFrame{
         bar.setIcon(new ImageIcon(bottom));
         bar.setBounds(0, 600, 1280, 200);
 
-        roundBackground = new JLabel(new ImageIcon(forRound));
+        roundBackground.setIcon(new ImageIcon(forRound));
         roundBackground.setBounds(10,440, 500, 55);
 
-        NPTLogo = new JLabel(new ImageIcon(nptLogo));
+        NPTLogo.setIcon(new ImageIcon(nptLogo));
         NPTLogo.setBounds(675, 680, 49, 42);
+
+        vsImg.setIcon(new ImageIcon(vsFile));
+        vsImg.setBounds(775, 323, 222, 293);
 
 
 
@@ -751,12 +754,6 @@ public class Test extends JFrame{
         smashgg.setForeground(Color.WHITE);
         smashgg.setBounds(430, 651, 400, 100);
         smashgg.setFont(Bebas40);
-
-        bigTourneyNum = new JLabel("#1");
-        Color mustard = new Color(255, 243,195);
-        bigTourneyNum.setForeground(Color.WHITE);
-        bigTourneyNum.setBounds(175, 390, 400, 400);
-        bigTourneyNum.setFont(Bebas200real);
 
         bottomTourneyName.setText("No Dice #1");
         bottomTourneyName.setForeground(Color.WHITE);
