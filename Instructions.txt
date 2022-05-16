@@ -1,0 +1,3 @@
+To start the program, run ThumbnailGenerator.jar
+
+For Recharged, GOYF, and No Dice, do not put any text in the Tourmanet Format box.
