@@ -1,3 +1,5 @@
 To start the program, run ThumbnailGenerator.jar
 
+Pressing the "Generate" button will update the thumbnail window and export it into a file called "screenshot.png"
+
 For Recharged, GOYF, and No Dice, do not put any text in the Tourmanet Format box.
