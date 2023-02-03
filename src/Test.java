@@ -888,17 +888,19 @@ public class Test extends JFrame{
             if (player == 1) {
                 Player1Img1.setBounds(-100, 0, 760, 850);
                 if (name.contains("Samus"))
-                    Player1Img1.setBounds(-110, 150, 760, 1100);
+                    Player1Img1.setBounds(-110, 100, 760, 1100);
                 if (name.contains("Dark Samus"))
                     Player1Img1.setBounds(-110, 150, 850, 1100);
                 if (name.contains("Yoshi"))
                     Player1Img1.setBounds(-110, 0, 760, 850);
+                if (name.contains("Fox"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
                 if (name.contains("Captain Falcon"))
                     Player1Img1.setBounds(-110, 150, 760, 900);
                 if (name.contains("Jigglypuff"))
                     Player1Img1.setBounds(-110, -75, 760, 850);
                 if (name.contains("Peach"))
-                    Player1Img1.setBounds(-110, 100, 760, 850);
+                    Player1Img1.setBounds(-110, 80, 760, 850);
                 if (name.contains("Daisy"))
                     Player1Img1.setBounds(-110, 100, 760, 900);
                 if (name.contains("Bowser "))
@@ -907,6 +909,8 @@ public class Test extends JFrame{
                     Player1Img1.setBounds(-110, -100, 760, 850);
                 if (name.contains("Sheik"))
                     Player1Img1.setBounds(-110, 100, 800, 930);
+                if (name.contains("Zelda"))
+                    Player1Img1.setBounds(-110, 120, 760, 850);
                 if (name.contains("Dr. "))
                     Player1Img1.setBounds(-110, 0, 760, 850);
                 if (name.contains("Pichu"))
@@ -914,11 +918,17 @@ public class Test extends JFrame{
                 if (name.contains("Falco "))
                     Player1Img1.setBounds(-110, 100, 760, 850);
                 if (name.contains("Marth"))
-                    Player1Img1.setBounds(-110, 100, 820, 850);
+                    Player1Img1.setBounds(-110, 130, 820, 850);
                 if (name.contains("Lucina"))
-                    Player1Img1.setBounds(-110, 100, 850, 850);
+                    Player1Img1.setBounds(-110, 130, 850, 850);
                 if (name.contains("Ganon"))
                     Player1Img1.setBounds(-175, 100, 930, 950);
+                if (name.contains("Mewtwo"))
+                    Player1Img1.setBounds(-150, 100, 760, 850);
+                if(name.contains("Roy"))
+                    Player1Img1.setBounds(-150, 100, 760, 850);
+                if (name.contains("Chrom"))
+                    Player1Img1.setBounds(-150, 150, 760, 850);
                 if (name.contains("GnW"))
                     Player1Img1.setBounds(-175, -25, 930, 950);
                 if (name.contains("Meta"))
@@ -951,22 +961,24 @@ public class Test extends JFrame{
                     Player1Img1.setBounds(-110, 50, 760, 850);
                 if (name.contains("Cuphead"))
                     Player1Img1.setBounds(-110, -80, 760, 850);
+                if (name.contains("Palutena"))
+                    Player1Img1.setBounds(-110, 100, 760, 850);
                 if (name.contains("Robin"))
                     Player1Img1.setBounds(-190, 100, 760, 950);
                 if (name.contains("Shulk"))
-                    Player1Img1.setBounds(-190, 85, 760, 950);
+                    Player1Img1.setBounds(-190, 35, 760, 950);
                 if (name.contains("Duck Hunt"))
                     Player1Img1.setBounds(-110, -190, 760, 850);
                 if (name.contains("Ryu"))
                     Player1Img1.setBounds(-110, 150, 760, 1200);
                 if (name.contains("Ken"))
-                    Player1Img1.setBounds(-90, 150, 760, 1200);
+                    Player1Img1.setBounds(-90, 100, 760, 1200);
                 if (name.contains("Cloud"))
-                    Player1Img1.setBounds(-200, 150, 760, 950);
+                    Player1Img1.setBounds(-200, 100, 760, 950);
                 if (name.contains("Corrin"))
-                    Player1Img1.setBounds(-200, 150, 760, 1100);
+                    Player1Img1.setBounds(-200, 100, 760, 1100);
                 if (name.contains("Bayonetta"))
-                    Player1Img1.setBounds(-300, 150, 1100, 1050);
+                    Player1Img1.setBounds(-300, 110, 1100, 1050);
                 if (name.contains("Ridley"))
                     Player1Img1.setBounds(-500, -200, 1120, 1050);
                 if (name.contains("Simon"))
@@ -983,20 +995,24 @@ public class Test extends JFrame{
                     Player1Img1.setBounds(-190, 0, 760, 850);
                 if (name.contains("Joker"))
                     Player1Img1.setBounds(-190, 100, 760, 1000);
+                if (name.contains("Hero"))
+                    Player1Img1.setBounds(-110, 150, 760, 650);
                 if (name.contains("Banjo"))
-                    Player1Img1.setBounds(-190, -75, 760, 850);
+                    Player1Img1.setBounds(-190, -100, 760, 850);
                 if (name.contains("Terry"))
                     Player1Img1.setBounds(-110, 150, 760, 950);
                 if (name.contains("Byleth"))
                     Player1Img1.setBounds(-110, 150, 760, 950);
+                if (name.contains("Min Min"))
+                    Player1Img1.setBounds(-110, -100, 760, 950);
                 if (name.contains("Steve"))
-                    Player1Img1.setBounds(-200, 150, 760, 850);
+                    Player1Img1.setBounds(-200, 100, 760, 850);
                 if (name.contains("Sephiroth"))
-                    Player1Img1.setBounds(-110, 200, 760, 1100);
+                    Player1Img1.setBounds(-110, 100, 760, 1100);
                 if (name.contains("Pyra Mythra"))
                     Player1Img1.setBounds(-300, 150, 1200, 850);
                 if (name.contains("Kazuya"))
-                    Player1Img1.setBounds(-150, 150, 760, 1050);
+                    Player1Img1.setBounds(-150, 100, 760, 1050);
                 if (name.contains("Sora"))
                     Player1Img1.setBounds(-110, 100, 760, 850);
 
@@ -1005,17 +1021,19 @@ public class Test extends JFrame{
             if (player == 2) {
                 Player2Img1.setBounds(666, 0, 760, 850);
                 if (name.contains("Samus"))
-                    Player2Img1.setBounds(666, 150, 760, 1100);
+                    Player2Img1.setBounds(666, 0, 760, 1100);
                 if (name.contains("Dark Samus"))
                     Player2Img1.setBounds(666, 150, 850, 1100);
                 if (name.contains("Yoshi"))
                     Player2Img1.setBounds(666, 0, 760, 850);
+                if (name.contains("Fox"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
                 if (name.contains("Captain Falcon"))
                     Player2Img1.setBounds(666, 150, 760, 900);
                 if (name.contains("Jigglypuff"))
                     Player2Img1.setBounds(666, -75, 760, 850);
                 if (name.contains("Peach"))
-                    Player2Img1.setBounds(666, 100, 760, 850);
+                    Player2Img1.setBounds(666, 80, 760, 850);
                 if (name.contains("Daisy"))
                     Player2Img1.setBounds(666, 100, 760, 900);
                 if (name.contains("Bowser "))
@@ -1024,6 +1042,8 @@ public class Test extends JFrame{
                     Player2Img1.setBounds(666, -100, 760, 850);
                 if (name.contains("Sheik"))
                     Player2Img1.setBounds(666, 100, 800, 930);
+                if (name.contains("Zelda"))
+                    Player2Img1.setBounds(666, 120, 760,  850);
                 if (name.contains("Dr. "))
                     Player2Img1.setBounds(666, 0, 760, 850);
                 if (name.contains("Pichu"))
@@ -1031,11 +1051,17 @@ public class Test extends JFrame{
                 if (name.contains("Falco "))
                     Player2Img1.setBounds(666, 100, 760, 850);
                 if (name.contains("Marth"))
-                    Player2Img1.setBounds(666, 100, 820, 850);
+                    Player2Img1.setBounds(666, 130, 820, 850);
                 if (name.contains("Lucina"))
-                    Player2Img1.setBounds(666, 100, 850, 850);
+                    Player2Img1.setBounds(666, 130, 850, 850);
                 if (name.contains("Ganon"))
                     Player2Img1.setBounds(491, 100, 930, 950);
+                if (name.contains("Mewtwo"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Roy"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
+                if (name.contains("Chrom"))
+                    Player2Img1.setBounds(666, 150, 760, 850);
                 if (name.contains("GnW"))
                     Player2Img1.setBounds(591, -25, 930, 950);
                 if (name.contains("Meta"))
@@ -1068,24 +1094,26 @@ public class Test extends JFrame{
                     Player2Img1.setBounds(666, 50, 760, 850);
                 if (name.contains("Cuphead"))
                     Player2Img1.setBounds(666, -80, 760, 850);
+                if (name.contains("Palutena"))
+                    Player2Img1.setBounds(666, 100, 760, 850);
                 if (name.contains("Robin"))
                     Player2Img1.setBounds(666, 100, 760, 950);
                 if (name.contains("Shulk"))
-                    Player2Img1.setBounds(666, 85, 760, 950);
+                    Player2Img1.setBounds(666, 35, 760, 950);
                 if (name.contains("Duck Hunt"))
                     Player2Img1.setBounds(666, -190, 760, 850);
                 if (name.contains("Ryu"))
                     Player2Img1.setBounds(666, 150, 760, 1200);
                 if (name.contains("Ken"))
-                    Player2Img1.setBounds(606, 150, 760, 1200);
+                    Player2Img1.setBounds(606, 100, 760, 1200);
                 if (name.contains("Cloud"))
-                    Player2Img1.setBounds(666, 150, 760, 950);
+                    Player2Img1.setBounds(666, 100, 760, 950);
                 if (name.contains("Corrin"))
-                    Player2Img1.setBounds(666, 150, 760, 1100);
+                    Player2Img1.setBounds(666, 100, 760, 1100);
                 if (name.contains("Bayonetta"))
-                    Player2Img1.setBounds(366, 150, 1100, 1050);
+                    Player2Img1.setBounds(366, 110, 1100, 1050);
                 if (name.contains("Ridley"))
-                    Player2Img1.setBounds(626, -150, 1120, 1050);
+                    Player2Img1.setBounds(626, -200, 1120, 1050);
                 if (name.contains("Simon"))
                     Player2Img1.setBounds(666, 150, 800, 950);
                 if (name.contains("Richter"))
@@ -1100,16 +1128,18 @@ public class Test extends JFrame{
                     Player2Img1.setBounds(706, 0, 760, 1000);
                 if (name.contains("Joker"))
                     Player2Img1.setBounds(706, 100, 760, 850);
+                if (name.contains("Hero"))
+                    Player2Img1.setBounds(666, 150, 760, 850);
                 if (name.contains("Banjo"))
-                    Player2Img1.setBounds(666, -75, 760, 850);
+                    Player2Img1.setBounds(666, -100, 760, 850);
                 if (name.contains("Terry"))
                     Player2Img1.setBounds(666, 150, 760, 950);
                 if (name.contains("Byleth"))
                     Player2Img1.setBounds(666, 150, 760, 950);
                 if (name.contains("Steve"))
-                    Player2Img1.setBounds(666, 150, 760, 850);
+                    Player2Img1.setBounds(666, 100, 760, 850);
                 if (name.contains("Sephiroth"))
-                    Player2Img1.setBounds(666, 200, 760, 1100);
+                    Player2Img1.setBounds(666, 100, 760, 1100);
                 if (name.contains("Pyra Mythra"))
                     Player2Img1.setBounds(366, 150, 1200, 850);
                 if (name.contains("Pyra Solo"))
@@ -1117,7 +1147,7 @@ public class Test extends JFrame{
                 if (name.contains("Mythra Solo"))
                     Player2Img1.setBounds(400, 120, 1200, 850);
                 if (name.contains("Kazuya"))
-                    Player2Img1.setBounds(626, 150, 760, 1050);
+                    Player2Img1.setBounds(626, 100, 760, 1050);
                 if (name.contains("Sora"))
                     Player2Img1.setBounds(666, 100, 760, 850);
                 //Default cords are Player2Img1.setBounds(666, 0, 760, 850);
@@ -2649,7 +2679,7 @@ public class Test extends JFrame{
                 if(name == "Yoshi 8")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Yoshi - Wool.png"));
                 if(name == "Young Link 1")
-                    image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Young Link - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Young Link - Green.png"));
                 if(name == "Young Link 2")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 1/Young Link - Red.png"));
                 if(name == "Young Link 3")
@@ -3987,7 +4017,7 @@ public class Test extends JFrame{
                 if(name == "Yoshi 8")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Yoshi - Wool.png"));
                 if(name == "Young Link 1")
-                    image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Young Link - Default.png"));
+                    image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Young Link - Green.png"));
                 if(name == "Young Link 2")
                     image = ImageIO.read(new File("SSBU Character Renders/For Player 2/Young Link - Red.png"));
                 if(name == "Young Link 3")
