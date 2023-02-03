@@ -91,6 +91,7 @@ public class Test extends JFrame{
             Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
             setChordsForImg(Player1Char1.getSelectedItem().toString(), 1);
             setChordsForImg(Player2Char1.getSelectedItem().toString(), 2);
+            System.out.println("X: " + Player1Img1.getX() + " Y: " + Player1Img1.getY());
             makeScreenShot(this);
         });
 
@@ -885,6 +886,7 @@ public class Test extends JFrame{
     private void setChordsForImg(String name, int player) {
         if(pickTourney.getSelectedItem().toString() != "No Dice") {
             if (player == 1) {
+                Player1Img1.setBounds(-100, 0, 760, 850);
                 if (name.contains("Samus"))
                     Player1Img1.setBounds(-110, 150, 760, 1100);
                 if (name.contains("Dark Samus"))
@@ -997,9 +999,11 @@ public class Test extends JFrame{
                     Player1Img1.setBounds(-150, 150, 760, 1050);
                 if (name.contains("Sora"))
                     Player1Img1.setBounds(-110, 100, 760, 850);
+
                 // Default cords are Player1Img1.setBounds(-110, 0, 760, 850);
             }
             if (player == 2) {
+                Player2Img1.setBounds(666, 0, 760, 850);
                 if (name.contains("Samus"))
                     Player2Img1.setBounds(666, 150, 760, 1100);
                 if (name.contains("Dark Samus"))
