@@ -20,7 +20,7 @@ public class Test extends JFrame{
     private JTextField Player1Input, Player2Input, dateInput, formatInput, roundInput, numberInput;
     private JComboBox Player1Char1, Player2Char1, pickTourney;
     private String allCharacters[], tourneys[];
-    private JButton submit;
+    private JButton submit, swap;
     private Font Bebas200, Bebas200real, Bebas125, Bebas100, Bebas80, Bebas40, Bebas30;
     private Font LemonMilk40, LemonMilk20;
     private Font Agency100, Agency50;
@@ -91,8 +91,19 @@ public class Test extends JFrame{
             Player2Img1.setIcon(new ImageIcon(chooseCharToLoad(Player2Char1.getSelectedItem().toString(), 2)));
             setChordsForImg(Player1Char1.getSelectedItem().toString(), 1);
             setChordsForImg(Player2Char1.getSelectedItem().toString(), 2);
-            System.out.println("X: " + Player1Img1.getX() + " Y: " + Player1Img1.getY());
             makeScreenShot(this);
+        });
+
+        swap.addActionListener(e -> {
+            Object holder;
+            holder = Player1Char1.getSelectedItem();
+            Player1Char1.setSelectedItem(Player2Char1.getSelectedItem());
+            Player2Char1.setSelectedItem(holder);
+
+            String stringHolder;
+            stringHolder = Player1Input.getText();
+            Player1Input.setText(Player2Input.getText());
+            Player2Input.setText(stringHolder);
         });
 
         pickTourney.addActionListener (new ActionListener () {
@@ -862,6 +873,9 @@ public class Test extends JFrame{
         submit = new JButton("Generate");
         submit.setBounds(10,280, 100, 30);
 
+        swap = new JButton("Swap");
+        swap.setBounds(290, 280, 100, 30);
+
         controlBackground.add(Player1Label);
         controlBackground.add(Player2Label);
         controlBackground.add(formatLabel);
@@ -881,6 +895,7 @@ public class Test extends JFrame{
         controlBackground.add(pickTourney);
         controlBackground.add(pickLabel);
         controlBackground.add(submit);
+        controlBackground.add(swap);
     }
 
     private void setChordsForImg(String name, int player) {
