@@ -1029,7 +1029,7 @@ public class Test extends JFrame{
                 if (name.contains("Kazuya"))
                     Player1Img1.setBounds(-150, 100, 760, 1050);
                 if (name.contains("Sora"))
-                    Player1Img1.setBounds(-110, 100, 760, 850);
+                    Player1Img1.setBounds(-110, 25, 760, 850);
 
                 // Default cords are Player1Img1.setBounds(-110, 0, 760, 850);
             }
@@ -1164,7 +1164,7 @@ public class Test extends JFrame{
                 if (name.contains("Kazuya"))
                     Player2Img1.setBounds(626, 100, 760, 1050);
                 if (name.contains("Sora"))
-                    Player2Img1.setBounds(666, 100, 760, 850);
+                    Player2Img1.setBounds(666, 25, 760, 850);
                 //Default cords are Player2Img1.setBounds(666, 0, 760, 850);
             }
         }
