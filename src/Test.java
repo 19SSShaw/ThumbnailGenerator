@@ -1142,7 +1142,7 @@ public class Test extends JFrame{
                 if (name.contains("Plant"))
                     Player2Img1.setBounds(706, 0, 760, 1000);
                 if (name.contains("Joker"))
-                    Player2Img1.setBounds(706, 100, 760, 850);
+                    Player2Img1.setBounds(706, 100, 760, 1000);
                 if (name.contains("Hero"))
                     Player2Img1.setBounds(666, 150, 760, 850);
                 if (name.contains("Banjo"))
@@ -1379,7 +1379,7 @@ public class Test extends JFrame{
                 if (name.contains("Plant"))
                     Player2Img1.setBounds(706, 0, 760, 1000);
                 if (name.contains("Joker"))
-                    Player2Img1.setBounds(706, 100, 760, 850);
+                    Player2Img1.setBounds(706, 100, 760, 1000);
                 if (name.contains("Banjo"))
                     Player2Img1.setBounds(666, -75, 760, 850);
                 if (name.contains("Terry"))
