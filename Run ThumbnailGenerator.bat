@@ -1,1 +1,1 @@
-java -jar ThumbnailGenerator.jar
+java -jar ThumbnailGenerator-v2.jar
